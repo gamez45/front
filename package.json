@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@directus/sdk": "^9.0.0-rc.96",
     "express": "^4.17.1"
   }
 }
