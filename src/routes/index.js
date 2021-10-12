@@ -5,7 +5,7 @@ const uuidv4 = require('uuid/v4');
 const request = require('request');
 
 router.get('/', (req, res) => {
-  res.render('index');
+  res.render('login');
 });
 
 router.get('/productlist', (req, res) => {
