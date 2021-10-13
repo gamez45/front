@@ -8,7 +8,7 @@ const request = require('request');
 router.get('/', async (req, res) => {
 
   
-fs.readFile('../chocolopas/uploads/6473fafa26cba1dac0c9ea16a4ac0c.jpg', 'base64', (err, response) => {
+fs.readFile('../uploads/2064c728-9f5a-49b6-9405-bb0dea599451.jpg', 'base64', (err, response) => {
   if (err) {
     return console.log(err);
   }
