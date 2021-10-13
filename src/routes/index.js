@@ -74,7 +74,7 @@ router.post('/', (req, res) => {
   
   }catch(e){
   
-    res.render('index');
+    res.redirect('/');
   }
     });
     
