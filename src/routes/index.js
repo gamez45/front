@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
     
     var options = {
       'method': 'POST',
-      'url': 'http://tlacuache.racing/auth/login',
+      'url': 'https://tlacuache.racing/auth/login',
       'headers': {
         'Authorization': 'Bearer',
         'Content-Type': 'application/json',
