@@ -5,7 +5,7 @@ const app = express();
 
 
 // Server
-app.set('port', 8000);
+app.set('port', process.env.PORT);
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('modules', path.resolve(__dirname, 'modules'));
 
