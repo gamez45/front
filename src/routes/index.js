@@ -9,7 +9,7 @@ const session = {}
 router.get('/', async(req, res) => {
 
 
-    fs.readFile('../uploads/logo.jpg', 'base64', (err, response) => {
+    fs.readFile('../uploads/2064c728-9f5a-49b6-9405-bb0dea599451.jpg', 'base64', (err, response) => {
         if (err) {
             return console.log(err);
         }
@@ -93,11 +93,11 @@ router.post('/', (req, res) => {
 });
 
 
-router.get('/tablero/:uE', (req, res) => {
-      userParam = req.params.uE;
-console.log(User);
+router.get('/tablero', (req, res) => {
+    userParam = req.params.uE;
+    console.log(User);
 
-     let User = require(`../setting/user/${userParam}.json`);
+    let User = require(`../setting/user/${userParam}.json`);
 
     let options = {
         'method': 'GET',
