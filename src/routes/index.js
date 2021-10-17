@@ -71,14 +71,12 @@ router.post('/', (req, res) => {
 
             let uE = await JSON.stringify(newLogin.loginEmail).slice(1, uS + 1);
 
-            console.log(uE);
-
 
             fs.writeFileSync('./src/setting/user/' + uE + '.json', JSON.stringify(`${token}`));
 
 
 
-            res.status(token).redirect('/tablero/:uE');
+            res.redirect(`/tablero/${uE}`);
 
 
         } catch (e) {
@@ -93,21 +91,19 @@ router.post('/', (req, res) => {
 });
 
 
-router.get('/tablero', (req, res) => {
-    userParam = req.params.uE;
-    console.log(User);
+router.get('/tablero/:user', async(req, res) => {
+    userName = await req.params.user;
+    console.log(userName);
 
-    let User = require(`../setting/user/${userParam}.json`);
+    let userToken = await require(`../setting/user/${userName}.json`);
 
     let options = {
         'method': 'GET',
         'url': 'https://tlacuache.racing/collections',
         'headers': {
-            'Authorization': `Bearer ${User}`,
+            'Authorization': `Bearer ${userToken}`,
             'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ "email": newLogin.loginEmail, "password": newLogin.loginPassword })
-
+        }
     };
     request(options, function(error, response) {
         try {
@@ -115,17 +111,9 @@ router.get('/tablero', (req, res) => {
             const res0 = response.body;
 
             const respa = JSON.parse(res0);
-            const respa0 = respa.data;
-            const token0 = respa0.access_token;
-            const A = token0;
 
 
-            token.push(A)
-
-            fs.writeFileSync('./src/setting/user/user1Token.json', JSON.stringify(`${token}`));
-            console.log(token)
-
-            res.render('tablero');
+            res.json(respa);
 
         } catch (e) {
 
