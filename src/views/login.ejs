@@ -1,34 +1,35 @@
 <% include partials/head %>
     <% include top-component/login %>
 
-        <body>
 
-            <body class="text-center">
+        </head>
 
-                <form class="form-signin" action="/" method="POST">
-                    <div class="img-logo">
-                        <img src="data:image/png;base64,<%= contents %>" />
-                    </div>
-                    <h1 class="h3 mb-3 font-weight-normal">Inicio de sesión</h1>
-                    <div class="form-group">
-                        <label for="inputEmail" class="sr-only">Email</label>
-                        <input type="email" name="loginEmail" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword" class="sr-only">Contraseña</label>
-                        <input type="password" name="loginPassword" id="inputPassword" class="form-control" placeholder="Password" required="">
-                        <div class="checkbox mb-3">
-                            <label>
+        <body class="text-center">
+
+            <form class="form-signin" action="/" method="POST">
+                <div class="img-logo">
+                    <img src="data:image/png;base64,<%= contents %>" />
+                </div>
+                <h1 class="h3 mb-3 font-weight-normal">Inicio de sesión</h1>
+                <div class="form-group">
+                    <label for="inputEmail" class="sr-only">Email</label>
+                    <input type="email" name="loginEmail" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="sr-only">Contraseña</label>
+                    <input type="password" name="loginPassword" id="inputPassword" class="form-control" placeholder="Password" required="">
+                    <div class="checkbox mb-3">
+                        <label>
               <input type="checkbox" value="remember-me"> Recuerdame
             </label>
-                        </div>
                     </div>
-                    <button class="btn btn-lg btn-primary btn-block " type="submit">INICIAR</button>
-                    <a class="nav-link" href="/bigdata">
+                </div>
+                <button class="btn btn-lg btn-primary btn-block " type="submit">INICIAR</button>
+                <a class="nav-link" href="/">
             CREAR CUENTA
         </a>
 
-                </form>
+            </form>
 
 
 
@@ -36,11 +37,7 @@
 
 
 
-                <% include bottom-component/login %>
+            <% include bottom-component/login %>
 
 
-                    <% include partials/footer %>
-
-            </body>
-
-            </html>
+                <% include partials/footer %>

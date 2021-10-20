@@ -1,251 +1,97 @@
-<div id="app" data-v-app="">
-    <div id="directus" style="--brand:#00C897;">
-        <!---->
-        <div class="private-view theme collections-overview">
-            <aside id="navigation" role="navigation" aria-label="Module Navigation" class="is-open">
-                <div class="module-bar">
-                    <div target="_blank" class="module-bar-logo">
-                        <div class="logo"></div>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg fixed-bottom navbar-dark bg-dark" id="navbarbg" aria-label="Main navigation">
+        <div class="container-fluid">
+            <ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg class="svg-inline--fa fa-user fa-w-14 fa-fw" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                    <path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z">
+
+                    </path>
+                </svg>
+                        <!-- <i class="fas fa-user fa-fw"></i> Font Awesome fontawesome.com --></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="/login">Login</a>
+
                     </div>
-                    <div class="modules">
-                        <div class="v-button" data-tooltip="qpR63OK1wqvh6SfDEvIE5"><a aria-current="page" href="/admin/collections" class="router-link-active router-link-exact-active button x-large align-center active icon tile normal" type="button" disabled="false"><span class="content"><span class="v-icon"
-                                        outline=""><svg viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"
-                                            fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
-                                            stroke-miterlimit="2">
-                                            <path
-                                                d="M2.036 16.961l8.578 3.944a.886.886 0 00.772 0l8.576-3.944c.357-.164.536-.443.536-.836V5.875a.924.924 0 00-.016-.166v-.048a.95.95 0 00-.037-.118l-.014-.039a.91.91 0 00-.073-.138l-.021-.03a1.067 1.067 0 00-.081-.097l-.043-.03a.901.901 0 00-.102-.083l-.025-.018a1.003 1.003 0 00-.124-.069l-8.578-3.944a.886.886 0 00-.772 0L2.036 5.039a.935.935 0 00-.124.069l-.025.018a.901.901 0 00-.102.083l-.03.032a.915.915 0 00-.08.097l-.021.03a.916.916 0 00-.074.138l-.025.037a1.006 1.006 0 00-.037.118v.048a.924.924 0 00-.016.166v10.25c0 .393.178.671.534.836zm1.306-9.646l6.735 3.102v8.223l-6.735-3.104V7.315zm8.578 11.323v-8.221l6.735-3.102v8.223l-6.735 3.1zm-.921-15.7l6.376 2.937-6.376 2.937-6.376-2.937 6.376-2.937z">
-                                            </path>
-                                        </svg></span></span>
-                                <div class="spinner">
-                                    <!---->
-                                </div>
-                            </a></div>
-                        <div class="v-button" data-tooltip="j5dWSKA1SkHWv2WmeTivR"><a href="/admin/users" class="button x-large align-center icon tile normal" type="button" disabled="false"><span class="content"><span class="v-icon" outline=""><i
-                                            class="">people_alt</i></span></span>
-                                <div class="spinner">
-                                    <!---->
-                                </div>
-                            </a></div>
-                        <div class="v-button" data-tooltip="7efUZSamucBCauesNWUw5"><a href="/admin/files" class="button x-large align-center icon tile normal" type="button" disabled="false"><span class="content"><span class="v-icon" outline=""><i
-                                            class="">folder</i></span></span>
-                                <div class="spinner">
-                                    <!---->
-                                </div>
-                            </a></div>
-                        <div class="v-button" data-tooltip="jgRKyM-B9wK06gNJL4Et5"><a href="/admin/insights" class="button x-large align-center icon tile normal" type="button" disabled="false"><span class="content"><span class="v-icon" outline=""><i
-                                            class="">insights</i></span></span>
-                                <div class="spinner">
-                                    <!---->
-                                </div>
-                            </a></div>
-                        <div class="v-button" data-tooltip="HTnDoBaXzCXlNlcFQuqZ0"><a href="/admin/docs" class="button x-large align-center icon tile normal" type="button" disabled="false"><span class="content"><span class="v-icon" outline=""><i
-                                            class="">info</i></span></span>
-                                <div class="spinner">
-                                    <!---->
-                                </div>
-                            </a></div>
-                    </div>
-                    <div class="module-bar-avatar">
-                        <div class="v-dialog">
-                            <div class="v-button sign-out" data-tooltip="yTmeQaK9T8Hhs_c_OoAwB"><button class="button x-large align-center icon tile normal" type="button"><span
-                                        class="content"><span class="v-icon"><svg viewBox="0 0 24 24" width="24"
-                                                height="24" fill="none" fill-rule="evenodd" clip-rule="evenodd"
-                                                stroke-linejoin="round" stroke-miterlimit="2"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                                <path
-                                                    d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4a2 2 0 00-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z">
-                                                </path>
-                                            </svg></span></span>
-                                    <div class="spinner">
-                                        <!---->
-                                    </div>
-                                </button></div>
-                        </div>
-                        <a href="/admin/users/6c285002-eb5e-408a-8d7c-1e96b8fc3d5c" class="">
-                            <div class="v-avatar tile large" data-tooltip="hLpYpBCBUv03ypZRhrrLh"><img src="/assets/86e4bd3c-1ebc-4bc4-afb9-a7468d7f281d?key=system-medium-cover&amp;access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZjMjg1MDAyLWViNWUtNDA4YS04ZDdjLTFlOTZiOGZjM2Q1YyIsImlhdCI6MTYzNDE1Mjc1MiwiZXhwIjoxNjM0MTUzNjUyLCJpc3MiOiJkaXJlY3R1cyJ9.xTRRjEWmFzYucI3e9a6ENOxsJwSDVZZWDB4-PfxGElQ"
-                                    alt="Luis Gamez" class="avatar-image"></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="module-nav alt-colors">
-                    <div class="project-info">
-                        <div class="latency-indicator" data-v-2cfd5c8b="" data-tooltip="6qTRvmksyYjqUcktW15uy"><span class="v-icon" data-v-2cfd5c8b=""><i class="">signal_wifi_4_bar</i></span></div>
-                        <span class="name">Directus</span>
-                    </div>
-                    <div class="module-nav-content">
-                        <div class="container" style="display: none;">
-                            <div class="v-input full-width search">
-                                <!---->
-                                <div class="input">
-                                    <div class="prepend"><span class="v-icon small"><i class="">search</i></span></div>
-                                    <!----><input small="" placeholder="Search Collection..." autocomplete="off" type="text" step="1">
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                </div>
-                                <!---->
-                            </div>
-                        </div>
-                        <ul class="v-list large collections-navigation" data-v-00ad15a2="" data-v-8e17865c="">
-                            <a href="/admin/collections/cms_settings" class="v-list-item link" data-v-1025f1ce="" data-v-8e17865c="" data-v-00ad15a2-s="">
-                                <div class="v-list-item-icon" data-v-4aa6e196="" data-v-8e17865c="" data-v-1025f1ce-s=""><span class="v-icon" data-v-8e17865c="" data-v-4aa6e196-s="" style="--v-icon-color:#C1C1C1;"><i class="">settings</i></span></div>
-                                <div class="v-list-item-content" data-v-86aef144="" data-v-8e17865c="" data-v-1025f1ce-s="">
-                                    <div class="v-text-overflow" data-v-5e8a506e="" data-v-8e17865c="" data-v-86aef144-s="">CMS Settings</div>
-                                </div>
-                            </a>
-                            <a href="/admin/collections/cms_tools" class="v-list-item link" data-v-1025f1ce="" data-v-8e17865c="" data-v-00ad15a2-s="">
-                                <div class="v-list-item-icon" data-v-4aa6e196="" data-v-8e17865c="" data-v-1025f1ce-s=""><span class="v-icon" data-v-8e17865c="" data-v-4aa6e196-s="" style="--v-icon-color:#C1C1C1;"><i class="">design_services</i></span></div>
-                                <div class="v-list-item-content" data-v-86aef144="" data-v-8e17865c="" data-v-1025f1ce-s="">
-                                    <div class="v-text-overflow" data-v-5e8a506e="" data-v-8e17865c="" data-v-86aef144-s="">CMS Tools</div>
-                                </div>
-                            </a>
-                            <a href="/admin/collections/callbacks" class="v-list-item link" data-v-1025f1ce="" data-v-8e17865c="" data-v-00ad15a2-s="">
-                                <div class="v-list-item-icon" data-v-4aa6e196="" data-v-8e17865c="" data-v-1025f1ce-s=""><span class="v-icon" data-v-8e17865c="" data-v-4aa6e196-s=""><i
-                                            class="">label</i></span></div>
-                                <div class="v-list-item-content" data-v-86aef144="" data-v-8e17865c="" data-v-1025f1ce-s="">
-                                    <div class="v-text-overflow" data-v-5e8a506e="" data-v-8e17865c="" data-v-86aef144-s="">Callbacks</div>
-                                </div>
-                            </a>
-                            <a href="/admin/collections/erp_accounting" class="v-list-item link" data-v-1025f1ce="" data-v-8e17865c="" data-v-00ad15a2-s="">
-                                <div class="v-list-item-icon" data-v-4aa6e196="" data-v-8e17865c="" data-v-1025f1ce-s=""><span class="v-icon" data-v-8e17865c="" data-v-4aa6e196-s="" style="--v-icon-color:#C1C1C1;"><i class="">account_balance</i></span></div>
-                                <div class="v-list-item-content" data-v-86aef144="" data-v-8e17865c="" data-v-1025f1ce-s="">
-                                    <div class="v-text-overflow" data-v-5e8a506e="" data-v-8e17865c="" data-v-86aef144-s="">Erp Accounting</div>
-                                </div>
-                            </a>
-                            <a href="/admin/collections/erp_groups" class="v-list-item link" data-v-1025f1ce="" data-v-8e17865c="" data-v-00ad15a2-s="">
-                                <div class="v-list-item-icon" data-v-4aa6e196="" data-v-8e17865c="" data-v-1025f1ce-s=""><span class="v-icon" data-v-8e17865c="" data-v-4aa6e196-s="" style="--v-icon-color:#C1C1C1;"><i class="">people</i></span></div>
-                                <div class="v-list-item-content" data-v-86aef144="" data-v-8e17865c="" data-v-1025f1ce-s="">
-                                    <div class="v-text-overflow" data-v-5e8a506e="" data-v-8e17865c="" data-v-86aef144-s="">Erp Groups</div>
-                                </div>
-                            </a>
-                            <a href="/admin/collections/erp_sales" class="v-list-item link" data-v-1025f1ce="" data-v-8e17865c="" data-v-00ad15a2-s="">
-                                <div class="v-list-item-icon" data-v-4aa6e196="" data-v-8e17865c="" data-v-1025f1ce-s=""><span class="v-icon" data-v-8e17865c="" data-v-4aa6e196-s="" style="--v-icon-color:#C1C1C1;"><i class="">shopping_cart</i></span></div>
-                                <div class="v-list-item-content" data-v-86aef144="" data-v-8e17865c="" data-v-1025f1ce-s="">
-                                    <div class="v-text-overflow" data-v-5e8a506e="" data-v-8e17865c="" data-v-86aef144-s="">Erp Sales</div>
-                                </div>
-                            </a>
-                            <a href="/admin/collections/erp_supply" class="v-list-item link" data-v-1025f1ce="" data-v-8e17865c="" data-v-00ad15a2-s="">
-                                <div class="v-list-item-icon" data-v-4aa6e196="" data-v-8e17865c="" data-v-1025f1ce-s=""><span class="v-icon" data-v-8e17865c="" data-v-4aa6e196-s="" style="--v-icon-color:#C1C1C1;"><i class="">work_outline</i></span></div>
-                                <div class="v-list-item-content" data-v-86aef144="" data-v-8e17865c="" data-v-1025f1ce-s="">
-                                    <div class="v-text-overflow" data-v-5e8a506e="" data-v-8e17865c="" data-v-86aef144-s="">Erp Supply</div>
-                                </div>
-                            </a>
-                            <a href="/admin/collections/erp_team" class="v-list-item link" data-v-1025f1ce="" data-v-8e17865c="" data-v-00ad15a2-s="">
-                                <div class="v-list-item-icon" data-v-4aa6e196="" data-v-8e17865c="" data-v-1025f1ce-s=""><span class="v-icon" data-v-8e17865c="" data-v-4aa6e196-s="" style="--v-icon-color:#C1C1C1;"><i class="">accessible</i></span></div>
-                                <div class="v-list-item-content" data-v-86aef144="" data-v-8e17865c="" data-v-1025f1ce-s="">
-                                    <div class="v-text-overflow" data-v-5e8a506e="" data-v-8e17865c="" data-v-86aef144-s="">Erp Team</div>
-                                </div>
-                            </a>
-                            <a href="/admin/collections/pm_products" class="v-list-item link" data-v-1025f1ce="" data-v-8e17865c="" data-v-00ad15a2-s="">
-                                <div class="v-list-item-icon" data-v-4aa6e196="" data-v-8e17865c="" data-v-1025f1ce-s=""><span class="v-icon" data-v-8e17865c="" data-v-4aa6e196-s="" style="--v-icon-color:#C1C1C1;"><i class="">loyalty</i></span></div>
-                                <div class="v-list-item-content" data-v-86aef144="" data-v-8e17865c="" data-v-1025f1ce-s="">
-                                    <div class="v-text-overflow" data-v-5e8a506e="" data-v-8e17865c="" data-v-86aef144-s="">Pm Products</div>
-                                </div>
-                            </a>
-                            <!---->
-                            <!---->
-                            <!---->
-                            <div class="v-menu" data-v-d3653af8="" data-v-8e17865c="" data-v-00ad15a2-s="">
-                                <div class="v-menu-activator" data-v-d3653af8=""></div>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-            </aside>
-            <div id="main-content" class="content">
-                <header class="header-bar" data-v-4b3dd21a="">
-                    <div class="v-button secondary nav-toggle" data-v-4b3dd21a=""><button class="button align-center rounded icon normal" type="button"><span class="content"><span
-                                    class="v-icon" data-v-4b3dd21a=""><i class="">menu</i></span></span>
-                            <div class="spinner">
-                                <!---->
-                            </div>
-                        </button></div>
-                    <div class="title-outer-prepend" data-v-4b3dd21a="">
-                        <div class="v-button secondary header-icon"><button class="button align-center rounded icon normal" type="button" disabled=""><span
-                                    class="content"><span class="v-icon"><svg viewBox="0 0 22 22"
-                                            xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
-                                            stroke-linejoin="round" stroke-miterlimit="2">
-                                            <path
-                                                d="M2.036 16.961l8.578 3.944a.886.886 0 00.772 0l8.576-3.944c.357-.164.536-.443.536-.836V5.875a.924.924 0 00-.016-.166v-.048a.95.95 0 00-.037-.118l-.014-.039a.91.91 0 00-.073-.138l-.021-.03a1.067 1.067 0 00-.081-.097l-.043-.03a.901.901 0 00-.102-.083l-.025-.018a1.003 1.003 0 00-.124-.069l-8.578-3.944a.886.886 0 00-.772 0L2.036 5.039a.935.935 0 00-.124.069l-.025.018a.901.901 0 00-.102.083l-.03.032a.915.915 0 00-.08.097l-.021.03a.916.916 0 00-.074.138l-.025.037a1.006 1.006 0 00-.037.118v.048a.924.924 0 00-.016.166v10.25c0 .393.178.671.534.836zm1.306-9.646l6.735 3.102v8.223l-6.735-3.104V7.315zm8.578 11.323v-8.221l6.735-3.102v8.223l-6.735 3.1zm-.921-15.7l6.376 2.937-6.376 2.937-6.376-2.937 6.376-2.937z">
-                                            </path>
-                                        </svg></span></span>
-                                <div class="spinner">
-                                    <!---->
-                                </div>
-                            </button></div>
-                    </div>
-                    <div class="title-container full" data-v-4b3dd21a="">
-                        <div class="headline" data-v-4b3dd21a=""></div>
-                        <div class="title" data-v-4b3dd21a="">
-                            <h1 class="type-title" data-v-4b3dd21a="">Collections</h1>
-                        </div>
-                    </div>
-                    <div class="spacer" data-v-4b3dd21a=""></div>
-                    <div class="actions" data-v-6f17254a="" data-v-4b3dd21a="">
-                        <div class="v-button secondary expand" data-v-6f17254a=""><button class="button align-center rounded icon outlined normal" type="button"><span
-                                    class="content"><span class="v-icon" data-v-6f17254a=""><i
-                                            class="">arrow_left</i></span></span>
-                                <div class="spinner">
-                                    <!---->
-                                </div>
-                            </button></div>
-                        <div class="action-buttons" data-v-6f17254a="">
-                            <div class="v-button secondary sidebar-toggle" data-v-6f17254a=""><button class="button align-center rounded icon outlined normal" type="button"><span
-                                        class="content"><span class="v-icon" outline="" data-v-6f17254a=""><i
-                                                class="">info</i></span></span>
-                                    <div class="spinner">
-                                        <!---->
-                                    </div>
-                                </button></div>
-                        </div>
-                    </div>
-                </header>
-                <main></main>
+                </li>
+            </ul>
+
+            <button class="navbar-toggler p-0 border-0" onclick="myFunction()"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <%if ( menus.length > 0) {%>
+
+                        <% menus.forEach(function(menu) { %>
+
+                            <%if ( menu.childs === null ) {%>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/<%= menu.collection %>">
+                                        <%= menu.titulo %>
+                                    </a>
+                                </li>
+                                <%} else {%>
+
+
+                                    <li class="nav-item dropdown row mb-3">
+
+                                        <a class="nav-link col-6 themed-grid-col" href="/<%= menu.collection %>">
+                                            <%= menu.titulo %>
+                                        </a>
+
+                                        <button class="navbar-toggler p-0 border-0 col-6 themed-grid-col" onclick="<%= menu.titulo %>()">
+    <a class="dropdown-toggle" href="#" id="dropdown<%= menu.titulo %>" data-bs-toggle="dropdo" aria-expanded="false">
+    </a>
+</button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown<%= menu.titulo %>" id="dropdown<%= menu.titulo %>ul">
+                                            <% menu.childs.forEach(function(menuChilds) { %>
+                                                <li>
+                                                    <a class="dropdown-item" href="/<%= menuChilds.child %>">
+                                                        <%= menuChilds.child %>
+                                                    </a>
+                                                </li>
+                                                <%})%>
+                                        </ul>
+                                    </li>
+                                    <script>
+                                        function <%= menu.titulo %> () {
+                                            var element =
+                                                document.getElementById('dropdown<%= menu.titulo %>ul');
+
+                                            if (element.classList) {
+                                                element.classList.toggle("show");
+                                            } else {
+                                                var classes = element.className.split(" ");
+                                                var i = classes.indexOf("show");
+
+                                                if (i >= 0)
+                                                    classes.splice(i, 1);
+                                                else
+                                                    classes.push("show");
+                                                element.className = classes.join(" ");
+                                            }
+                                        }
+                                    </script>
+                                    <%}%>
+                                        <%})%>
+                                            <%} else {%>
+                                                <%}%>
+                </ul>
+
             </div>
-            <aside id="sidebar" role="contentinfo" class="alt-colors" aria-label="Module Sidebar">
-                <div class="flex-container">
-                    <div class="v-item-group sidebar-detail-group" data-v-ebb6371e="">
-                        <div class="sidebar-detail" data-v-cd036256=""><button class="toggle" data-v-cd036256="">
-                                <div class="icon" data-v-cd036256="">
-                                    <div class="v-badge bordered" data-v-5d3df5d4="" data-v-cd036256="">
-                                        <!----><span class="v-icon" outline="" data-v-cd036256=""><i
-                                                class="">info_outline</i></span>
-                                    </div>
-                                </div>
-                                <div class="title" data-v-cd036256="" style="display: none;">Information</div>
-                                <!---->
-                            </button>
-                            <div class="close" data-v-cd036256="" style="display: none;"><span class="v-icon" data-v-cd036256=""><i class="">close</i></span></div>
-                            <div class="scroll-container" data-v-cd036256="" style="display: none;">
-                                <div class="content" data-v-cd036256="">
-                                    <div class="page-description">
-                                        <p><strong>Collections Overview</strong> — List of all collections you have access to.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="spacer"></div>
-                    <div class="notifications-preview" data-v-8ca41ff4="">
-                        <!----><button class="sidebar-button toggle" data-v-3f4d4d50="" data-v-8ca41ff4="" data-tooltip="mlQKcB0Zw4Se4DTqW3EvI">
-                            <div class="icon" data-v-3f4d4d50=""><span class="v-icon" outline="" data-v-3f4d4d50=""><i
-                                        class="">notifications</i></span></div>
-                            <!---->
-                        </button>
-                    </div>
-                </div>
-            </aside>
-            <div class="v-overlay active has-click nav-overlay">
-                <div class="overlay"></div>
-                <div class="content"></div>
+            <button class="navbar-toggler p-0 border-0" onclick="FunctionSearch()"><span class="navbar-search-icon"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><path d="M7,9H2V7h5V9z M7,12H2v2h5V12z M20.59,19l-3.83-3.83C15.96,15.69,15.02,16,14,16c-2.76,0-5-2.24-5-5s2.24-5,5-5s5,2.24,5,5 c0,1.02-0.31,1.96-0.83,2.75L22,17.59L20.59,19z M17,11c0-1.65-1.35-3-3-3s-3,1.35-3,3s1.35,3,3,3S17,12.65,17,11z M2,19h10v-2H2 V19z"/></g></svg>
+            </span></button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsSearch">
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
             </div>
-            <div class="v-overlay has-click sidebar-overlay">
-                <div class="overlay"></div>
-                <!---->
-            </div>
-            <div class="notifications-group"></div>
-            <div class="notification-dialogs"></div>
         </div>
-    </div>
-</div>
+    </nav>

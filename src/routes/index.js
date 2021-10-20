@@ -76,7 +76,7 @@ router.post('/', (req, res) => {
 
 
 
-            res.redirect(`/tablero/${uE}`);
+            res.redirect(`/dashboards/${uE}`);
 
 
         } catch (e) {
@@ -91,30 +91,34 @@ router.post('/', (req, res) => {
 });
 
 
-router.get('/tablero/:user', async(req, res) => {
+router.get('/dashboards/:user', async(req, res) => {
     userName = await req.params.user;
-    console.log(userName);
+
+
 
     let userToken = await require(`../setting/user/${userName}.json`);
 
     let options = {
         'method': 'GET',
-        'url': 'https://tlacuache.racing/collections',
+        'url': 'https://tlacuache.racing/items/menus',
         'headers': {
             'Authorization': `Bearer ${userToken}`,
             'Content-Type': 'application/json',
         }
     };
-    request(options, function(error, response) {
+    request(options, async function(error, response) {
         try {
 
-            const res0 = response.body;
+            const res0 = await response.body;
 
-            const respa = JSON.parse(res0);
+            const resData = await JSON.parse(res0);
+
+            const menus = await resData.data
 
 
-            res.json(respa);
 
+
+            res.render(`dashboards`, { menus })
         } catch (e) {
 
             res.redirect('/');
