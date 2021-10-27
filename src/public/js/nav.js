@@ -1,35 +1,39 @@
-function myFunction() {
-    var element =
-        document.getElementById('navbarsExampleDefault');
+function menuFunction() {
+    var x = document.getElementById("navbarsMenu");
+    var y = document.getElementById("navbarsSearch");
 
-    if (element.classList) {
-        element.classList.toggle("open");
+    if (x.style.visibility === "visible") {
+    
+     
+      
+       x.style.visibility = "hidden";
+       x.style.transform = "translateX(100%)";
+      
     } else {
-        var classes = element.className.split(" ");
-        var i = classes.indexOf("open");
-
-        if (i >= 0)
-            classes.splice(i, 1);
-        else
-            classes.push("open");
-        element.className = classes.join(" ");
+    y.style.visibility = "hidden";
+    y.style.transform = "translateX(100%)";
+      x.style.visibility = "visible";
+      x.style.transform = "translateX(-100%)";
     }
-}
+  }
 
-function FunctionSearch() {
-    var element =
-        document.getElementById('navbarsSearch');
+  function searchFunction() {
+    var x = document.getElementById("navbarsMenu");
+    var y = document.getElementById("navbarsSearch");
 
-    if (element.classList) {
-        element.classList.toggle("open");
+    if (y.style.visibility === "visible") {
+    
+     
+      
+       y.style.visibility = "hidden";
+       y.style.transform = "translateX(100%)";
+      
     } else {
-        var classes = element.className.split(" ");
-        var i = classes.indexOf("open");
-
-        if (i >= 0)
-            classes.splice(i, 1);
-        else
-            classes.push("open");
-        element.className = classes.join(" ");
+    x.style.visibility = "hidden";
+    x.style.transform = "translateX(100%)";
+      y.style.visibility = "visible";
+      y.style.transform = "translateX(-100%)";
     }
-}
+  }
+  
+  

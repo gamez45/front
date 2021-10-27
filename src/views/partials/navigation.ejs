@@ -1,26 +1,17 @@
 <body class="bg-light">
 
     <nav class="navbar navbar-expand-lg fixed-bottom navbar-dark bg-dark" id="navbarbg" aria-label="Main navigation">
-        <div class="container-fluid">
-            <ul class="navbar-nav ml-auto ml-md-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <svg class="svg-inline--fa fa-user fa-w-14 fa-fw" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
-                    <path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z">
+        <div class="container-fluid navBottom">
 
-                    </path>
-                </svg>
-                        <!-- <i class="fas fa-user fa-fw"></i> Font Awesome fontawesome.com --></a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="/login">Login</a>
+            <div id="navLogin">
+            <a class="navbar-toggler p-0 border-0"><i class="fa fa-user" href="/login"></i>
+            
+            </a>
+        </div>
+            <div id="navMenu">
+            <button class="navbar-toggler p-0 border-0" onclick="menuFunction()"><i class="fa fa-navicon"></i></button>
 
-                    </div>
-                </li>
-            </ul>
-
-            <button class="navbar-toggler p-0 border-0" onclick="myFunction()"><span class="navbar-toggler-icon"></span></button>
-
-            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsMenu">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                     <%if ( menus.length > 0) {%>
@@ -83,8 +74,9 @@
                 </ul>
 
             </div>
-            <button class="navbar-toggler p-0 border-0" onclick="FunctionSearch()"><span class="navbar-search-icon"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><path d="M7,9H2V7h5V9z M7,12H2v2h5V12z M20.59,19l-3.83-3.83C15.96,15.69,15.02,16,14,16c-2.76,0-5-2.24-5-5s2.24-5,5-5s5,2.24,5,5 c0,1.02-0.31,1.96-0.83,2.75L22,17.59L20.59,19z M17,11c0-1.65-1.35-3-3-3s-3,1.35-3,3s1.35,3,3,3S17,12.65,17,11z M2,19h10v-2H2 V19z"/></g></svg>
-            </span></button>
+        </div>
+            <div id="navSearch">
+            <button class="navbar-toggler p-0 border-0" onclick="searchFunction()"><i class="fa fa-search"></i></button>
 
             <div class="navbar-collapse offcanvas-collapse" id="navbarsSearch">
 
@@ -93,5 +85,6 @@
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
             </div>
+        </div>
         </div>
     </nav>
