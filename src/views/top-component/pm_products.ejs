@@ -1,0 +1,93 @@
+<style>
+  * {
+      box-sizing: border-box;
+    }
+    
+    #myInput {
+    background-image: url(/css/searchicon.png);
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 80%;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    margin-left: 10%;
+    border-radius: 16px;
+    }
+    
+    #myTable {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid #ddd;
+      font-size: 12px;
+    }
+    
+    #myTable th, #myTable td {
+      text-align: left;
+      padding: 12px;
+    }
+    
+    #myTable tr {
+      border-bottom: 1px solid #ddd;
+    }
+    
+    #myTable tr.header, #myTable tr:hover {
+      background-color: #f1f1f1;
+    }
+    
+
+
+.container-prog {
+  width: 100%;
+  background-color: #ddd;border-radius: 16px;
+}
+
+.progress {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.Progress100 {width: 100%; background-color: green;border-radius: 16px;}
+.Progress75 {width: 75%; background-color: yellow; color:black;border-radius: 16px;}
+.Progress50 {width: 50%; background-color: orange;border-radius: 16px;}
+.Progress25 {width: 25%; background-color: red;border-radius: 16px;}
+
+.popup .container-popup{
+  
+  display: none;
+  cursor: pointer;
+  width: 50%;
+  height: 50px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 70%;
+    top:10%;
+    margin-left: -80px;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  display: block;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>

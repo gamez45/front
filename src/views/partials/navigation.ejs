@@ -4,7 +4,7 @@
         <div class="container-fluid navBottom">
 
             <div id="navLogin">
-            <a class="navbar-toggler p-0 border-0"><i class="fa fa-user" href="/login"></i>
+            <a class="navbar-toggler p-0 border-0"><i class="fa fa-user" href="/login/<%= userName %>"></i>
             
             </a>
         </div>
@@ -21,7 +21,7 @@
                             <%if ( menu.childs === null ) {%>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/<%= menu.collection %>">
+                                    <a class="nav-link" href="/<%= menu.collection %>/<%= userName %>">
                                         <%= menu.titulo %>
                                     </a>
                                 </li>
@@ -30,7 +30,7 @@
 
                                     <li class="nav-item dropdown row mb-3">
 
-                                        <a class="nav-link col-6 themed-grid-col" href="/<%= menu.collection %>">
+                                        <a class="nav-link col-6 themed-grid-col" href="/<%= menu.collection %>/<%= userName %>">
                                             <%= menu.titulo %>
                                         </a>
 
@@ -41,7 +41,7 @@
                                         <ul class="dropdown-menu" aria-labelledby="dropdown<%= menu.titulo %>" id="dropdown<%= menu.titulo %>ul">
                                             <% menu.childs.forEach(function(menuChilds) { %>
                                                 <li>
-                                                    <a class="dropdown-item" href="/<%= menuChilds.child %>">
+                                                    <a class="dropdown-item" href="/<%= menuChilds.child %>/<%= userName %>">
                                                         <%= menuChilds.child %>
                                                     </a>
                                                 </li>
@@ -49,7 +49,7 @@
                                         </ul>
                                     </li>
                                     <script>
-                                        function <%= menu.titulo %> () {
+                                        function <%= menu.titulo %>() {
                                             var element =
                                                 document.getElementById('dropdown<%= menu.titulo %>ul');
 

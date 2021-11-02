@@ -26,10 +26,10 @@ router.get('/', async(req, res) => {
 
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
     const token = []
 
-    const { loginEmail, loginPassword } = req.body;
+    const { loginEmail, loginPassword } = await req.body;
 
     if (!loginEmail || !loginPassword) {
         res.status(400).send("Ingresar datos");
@@ -58,22 +58,21 @@ router.post('/', (req, res) => {
     request(options, async function(error, response) {
         try {
 
-            const res0 = response.body;
+            const res0 = await response.body;
 
-            const respa = JSON.parse(res0);
-            const respa0 = respa.data;
-            const token0 = respa0.access_token;
-            const A = token0;
+            const respa = await JSON.parse(res0);
+            const respa0 = await respa.data;
+            const token0 = await respa0.access_token;
+            const A = await token0;
 
 
-            token.push(A);
+            let WT = await token.push(A);
             let uS = await _.words(newLogin.loginEmail, "@").index;
 
             let uE = await JSON.stringify(newLogin.loginEmail).slice(1, uS + 1);
 
 
-            fs.writeFileSync('./src/setting/user/' + uE + '.json', JSON.stringify(`${token}`));
-
+            let wW = await fs.writeFileSync('./src/setting/user/' + uE + '.json', JSON.stringify(`${token}`));
 
 
             res.redirect(`/dashboards/${uE}`);
@@ -113,12 +112,15 @@ router.get('/dashboards/:user', async(req, res) => {
 
             const resData = await JSON.parse(res0);
 
-            const menus = await resData.data
+            const menus = await resData.data;
+
+           
 
 
+            let wM = await fs.writeFileSync('./src/setting/collections/menu.json', JSON.stringify(menus));
 
-
-            res.render(`dashboards`, { menus })
+            res.render(`dashboards`, { menus, userName })
+           
         } catch (e) {
 
             res.redirect('/');
@@ -127,6 +129,51 @@ router.get('/dashboards/:user', async(req, res) => {
 
     });
 });
+
+
+router.get('/pm_products/:user', async (req, res) => {
+    userName = await req.params.user;
+
+
+
+    let userToken = await require(`../setting/user/${userName}.json`);
+    let menus = await require(`../setting/collections/menu.json`);
+    
+    
+
+    let options = {
+        'method': 'GET',
+        'url': 'https://tlacuache.racing/items/pm_products?limit=25&fields[]=mastercodesid.partid.partname&fields[]=mastercodesid.positionid.positionname&fields[]=mastercodesid.mastercodesid&fields[]=pim_mpn.pim_mpn_mpnid.brandid.brandlogo.id&fields[]=pim_mpn.pim_mpn_mpnid.brandid.brandlogo.type&fields[]=pim_mpn.pim_mpn_mpnid.brandid.brandlogo.title&fields[]=pim_mpn.pim_mpn_mpnid.mpn&fields[]=pim_mpn._requires&fields[]=pim_mpn.id&fields[]=sku&fields[]=status&fields[]=id&sort[]=id&page=1&filter=%7B%22status%22:%7B%22_neq%22:%22archived%22%7D%7D&meta[]=filter_count&meta[]=total_count',
+        'headers': {
+            'Authorization': `Bearer ${userToken}`,
+            'Content-Type': 'application/json',
+        }
+    };
+    request(options, async function(error, response) {
+        try {
+           // let menus = await require(`../setting/collections/menu.json`);
+            const res0 = await response.body;
+
+            const resData = await JSON.parse(res0);
+
+            const Meta = await resData.meta
+            const pmProducts = await resData.data
+
+
+
+          
+
+           res.render(`pm_products`, { pmProducts, menus, userName })
+        } catch (e) {
+
+            res.redirect('/');
+        }
+
+
+    });
+   
+});
+
 
 router.get('/productlist', (req, res) => {
     res.render('productlist');

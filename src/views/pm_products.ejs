@@ -1,0 +1,84 @@
+<% include partials/head %>
+<% include top-component/pm_products %>
+
+    </head>
+
+    <body class="sb-sidenav-toggled">
+        <% include partials/navigation %>
+
+     
+           <main>
+            
+            <h2>Productos</h2>
+            
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar por nombre..." title="Type in a name">
+            
+            <table id="myTable">
+              <tr class="header">
+                <th style="width:50%;">Nombre</th>
+                <th style="width:25%;">Sku</th>
+                <th style="width:25%;">Status</th>
+                
+              </tr>
+              <%if ( pmProducts.length > 0) {%>
+
+                <% pmProducts.forEach(function(product) { %>
+              <tr>
+                <td><%= product.mastercodesid.partid.partname %></td>
+                <td><%= product.sku %></td>
+                <td class="popup" onclick="popupFunction()">
+                  <%if ( product.status === "published") {%>
+                    <i class="fa fa-circle" style="color:green;">
+                 <div class="container-popup" id="myPopup">
+                  <div class="container-status"><%= product.status %></div>
+                  <div class="container-prog">
+                    <div class="progress Progress100">100%
+
+                    </div>
+                  </div>
+                </div>
+              </i>
+              <%} else {%>
+                <i class="fa fa-circle" style="color:red;">
+                  <div class="container-popup" id="myPopup">
+                   <div class="container-status"><%= product.status %></div>
+                   <div class="container-prog">
+                     <div class="progress Progress100">100%
+ 
+                     </div>
+                   </div>
+                 </div>
+               </i>
+
+                <%}%>
+
+            </td>
+               
+                
+              </tr>
+              <script>
+                // When the user clicks on div, open the popup
+                function popupFunction() {
+                  var popup = document.getElementById("myPopup");
+                  popup.classList.toggle("show");
+                }
+                </script>
+              <%})%>
+         
+         
+              <%} else {%>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr> 
+              <%}%>
+            </table>
+            
+            
+           </main> 
+
+           <% include bottom-component/pm_products %>
+            <% include partials/footer %>
