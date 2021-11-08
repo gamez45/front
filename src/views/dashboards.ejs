@@ -1,8 +1,345 @@
 <% include partials/head %>
+
     </head>
 
    
         <% include partials/navigation %>
 
-        <div><%= userName %></div>
+        <div id="chart-container">
+<style>
+    #container {
+    min-width: 310px;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.buttons {
+    min-width: 310px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 0;
+}
+
+.buttons button {
+    cursor: pointer;
+    border: 1px solid silver;
+    border-right-width: 0;
+    background-color: #f8f8f8;
+    font-size: 1rem;
+    padding: 0.5rem;
+    outline: none;
+    transition-duration: 0.3s;
+    margin: 0;
+}
+
+.buttons button:first-child {
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+}
+
+.buttons button:last-child {
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    border-right-width: 1px;
+}
+
+.buttons button:hover {
+    color: white;
+    background-color: rgb(158 159 163);
+    outline: none;
+}
+
+.buttons button.active {
+    background-color: #0051b4;
+    color: white;
+}
+
+</style>
+            <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+<div class='buttons'>
+  <button id='7'>
+    Jul
+  </button>
+  <button id='8'>
+    Ago
+  </button>
+  <button id='9'>
+    Sep
+  </button>
+  <button id='10'>
+    Oct
+  </button>
+  <button id='11' class='active'>
+    Nov
+  </button>
+</div>
+<div id="container"></div>
+
+            <script>
+                var dataPrev = {
+                  11: [
+                      ['Faros', 0],
+                      ['Mirrors', 0],
+                      ['Doors', 0],
+                      ['Carga y Arranque', 11],
+                      ['Limpieza Cristales', 24],
+                      ['Bumpers', 38],
+                      ['Ruedas Neumaticos', 29],
+                      ['Herramienta Automotriz', 46]
+                  ],
+                  10: [
+                      ['Faros', 13],
+                      ['Mirrors', 0],
+                      ['Doors', 0],
+                      ['Carga y Arranque', 0],
+                      ['Limpieza Cristales', 22],
+                      ['Bumpers', 51],
+                      ['Ruedas Neumaticos', 19],
+                      ['Herramienta Automotriz', 36]
+                  ],
+                  9: [
+                      ['Faros', 0],
+                      ['Mirrors', 0],
+                      ['Doors', 0],
+                      ['Carga y Arranque', 13],
+                      ['Limpieza Cristales', 27],
+                      ['Bumpers', 32],
+                      ['Ruedas Neumaticos', 9],
+                      ['Herramienta Automotriz', 37]
+                  ],
+                  8: [
+                      ['Faros', 0],
+                      ['Mirrors', 5],
+                      ['Doors', 16],
+                      ['Carga y Arranque', 0],
+                      ['Limpieza Cristales', 32],
+                      ['Bumpers', 28],
+                      ['Ruedas Neumaticos', 0],
+                      ['Herramienta Automotriz', 36]
+                  ],
+                  7: [
+                      ['Faros', 0],
+                      ['Mirrors', 0],
+                      ['Doors', 9],
+                      ['Carga y Arranque', 20],
+                      ['Limpieza Cristales', 26],
+                      ['Bumpers', 16],
+                      ['Ruedas Neumaticos', 0],
+                      ['Herramienta Automotriz', 44]
+                  ]
+              };
+              
+              var data = {
+                  11: [
+                      ['Faros', 0],
+                      ['Mirrors', 0],
+                      ['Doors', 0],
+                      ['Carga y Arranque', 17],
+                      ['Limpieza Cristales', 19],
+                      ['Bumpers', 26],
+                      ['Ruedas Neumaticos', 27],
+                      ['Herramienta Automotriz', 46]
+                  ],
+                  10: [
+                      ['Faros', 13],
+                      ['Mirrors', 0],
+                      ['Doors', 0],
+                      ['Carga y Arranque', 0],
+                      ['Limpieza Cristales', 24],
+                      ['Bumpers', 38],
+                      ['Ruedas Neumaticos', 29],
+                      ['Herramienta Automotriz', 46]
+                  ],
+                  9: [
+                      ['Faros', 0],
+                      ['Mirrors', 0],
+                      ['Doors', 0],
+                      ['Carga y Arranque', 16],
+                      ['Limpieza Cristales', 22],
+                      ['Bumpers', 51],
+                      ['Ruedas Neumaticos', 19],
+                      ['Herramienta Automotriz', 36]
+                  ],
+                  8: [
+                      ['Faros', 0],
+                      ['Mirrors', 16],
+                      ['Doors', 17],
+                      ['Carga y Arranque', 0],
+                      ['Limpieza Cristales', 27],
+                      ['Bumpers', 32],
+                      ['Ruedas Neumaticos', 0],
+                      ['Herramienta Automotriz', 37]
+                  ],
+                  7: [
+                      ['Faros', 0],
+                      ['Mirrors', 0],
+                      ['Doors', 16],
+                      ['Carga y Arranque', 13],
+                      ['Limpieza Cristales', 32],
+                      ['Bumpers', 28],
+                      ['Ruedas Neumaticos', 0],
+                      ['Herramienta Automotriz', 36]
+                  ]
+              };
+              
+              var categories = [{
+                  name: 'Faros',
+                  picture: 197582,
+                  color: 'rgb(201, 36, 39)'
+              }, {
+                  name: 'Mirrors',
+                  picture: 197604,
+                  color: 'rgb(201, 36, 39)'
+              }, {
+                  name: 'Doors',
+                  picture: 197507,
+                  color: 'rgb(0, 82, 180)'
+              }, {
+                  name: 'Carga y Arranque',
+                  picture: 197571,
+                  color: 'rgb(0, 0, 0)'
+              }, {
+                  name: 'Limpieza Cristales',
+                  picture: 197408,
+                  color: 'rgb(240, 240, 240)'
+              }, {
+                  name: 'Bumpers',
+                  picture: 197375,
+                  color: 'rgb(255, 217, 68)'
+              }, {
+                  name: 'Ruedas Neumaticos',
+                  picture: 197374,
+                  color: 'rgb(0, 82, 180)'
+              }, {
+                  name: 'Herramienta Automotriz',
+                  picture: 197484,
+                  color: 'rgb(215, 0, 38)'
+              }];
+              
+              
+              function getData(data) {
+                  return data.map(function (category, i) {
+                      return {
+                          name: category[0],
+                          y: category[1],
+                          color: categories[i].color
+                      };
+                  });
+              }
+              
+              var chart = Highcharts.chart('container', {
+                  chart: {
+                      type: 'column'
+                  },
+                  title: {
+                      text: 'Mes 11 - Ventas por Categorias',
+                      align: 'left'
+                  },
+                  plotOptions: {
+                      series: {
+                          grouping: false,
+                          borderWidth: 0
+                      }
+                  },
+                  legend: {
+                      enabled: false
+                  },
+                  tooltip: {
+                      shared: true,
+                      headerFormat: '<span style="font-size: 15px">{point.point.name}</span><br/>',
+                      pointFormat: '<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y} ventas</b><br/>'
+                  },
+                  xAxis: {
+                      type: 'category',
+                      max: 4,
+                      labels: {
+                          useHTML: true,
+                          animate: true,
+                          formatter: function () {
+                              var value = this.value,
+                                  output;
+              
+                              categories.forEach(function (category) {
+                                  if (category.name === value) {
+                                      output = category.picture;
+                                  }
+                              });
+              
+                              return '<span><img src=""/><br></span>';
+                          }
+                      }
+                  },
+                  yAxis: [{
+                      title: {
+                          text: 'Ventas'
+                      },
+                      showFirstLabel: false
+                  }],
+                  series: [{
+                      color: 'rgb(158, 159, 163)',
+                      pointPlacement: -0.2,
+                      linkedTo: 'main',
+                      data: dataPrev[11].slice(),
+                      name: 'Octubre'
+                  }, {
+                      name: 'Noviembre',
+                      id: 'main',
+                      dataSorting: {
+                          enabled: true,
+                          matchByName: true
+                      },
+                      dataLabels: [{
+                          enabled: true,
+                          inside: true,
+                          style: {
+                              fontSize: '16px'
+                          }
+                      }],
+                      data: getData(data[11]).slice()
+                  }],
+                  exporting: {
+                      allowHTML: true
+                  }
+              });
+              
+              var months = [11, 10, 9, 8, 7];
+              
+
+              months.forEach(function (month) {
+                  var btn = document.getElementById(month);
+                  
+              
+                  btn.addEventListener('click', function () {
+              
+                      document.querySelectorAll('.buttons button.active').forEach(function (active) {
+                          active.className = '';
+                      });
+                      btn.className = 'active';
+              
+                      chart.update({
+                          title: {
+                              text: 'Mes ' + month + ' - Ventas por Categoria'
+                          },
+                          series: [{
+                              name: month - 1,
+                              data: dataPrev[month].slice()
+                          }, {
+                              name: month,
+                              data: getData(data[month]).slice()
+                          }]
+                      }, true, false, {
+                          duration: 800
+                      });
+                  });
+              });
+              
+                         
+              </script>
+        </div>
+      
+
             <% include partials/footer %>
