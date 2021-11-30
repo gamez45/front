@@ -9,22 +9,15 @@ const session = {}
 router.get('/', async(req, res) => {
 
 
-    fs.readFile('../uploads/2064c728-9f5a-49b6-9405-bb0dea599451.jpg', 'base64', (err, response) => {
-        if (err) {
-            return console.log(err);
-        }
-
-
-        let contents = response;
 
 
 
-        res.render('login', { contents });
+        res.render('login');
 
     });
 
 
-});
+
 
 router.post('/', async (req, res) => {
     const token = []
@@ -47,7 +40,7 @@ router.post('/', async (req, res) => {
 
     let options = {
         'method': 'POST',
-        'url': 'https://tlacuache.racing/auth/login',
+        'url': 'http://tlacuache.racing:8055/auth/login',
         'headers': {
             'Authorization': 'Bearer',
             'Content-Type': 'application/json',
@@ -99,7 +92,7 @@ router.get('/dashboards/:user', async(req, res) => {
 
     let options = {
         'method': 'GET',
-        'url': 'https://tlacuache.racing/items/menus',
+        'url': 'http://tlacuache.racing:8055/items/menus',
         'headers': {
             'Authorization': `Bearer ${userToken}`,
             'Content-Type': 'application/json',
@@ -112,9 +105,10 @@ router.get('/dashboards/:user', async(req, res) => {
 
             const resData = await JSON.parse(res0);
 
-            const menus = await resData.data;
+            const M = await resData.data;
 
-           
+            let menus = await _.sortBy(M, ['sort']);
+           console.log(menus)
 
 
             let wM = await fs.writeFileSync('./src/setting/collections/menu.json', JSON.stringify(menus));
@@ -131,6 +125,9 @@ router.get('/dashboards/:user', async(req, res) => {
 });
 
 
+
+
+
 router.get('/pm_products/:user', async (req, res) => {
     userName = await req.params.user;
 
@@ -143,7 +140,7 @@ router.get('/pm_products/:user', async (req, res) => {
 
     let options = {
         'method': 'GET',
-        'url': 'https://tlacuache.racing/items/pm_products?limit=25&fields[]=mastercodesid.partid.partname&fields[]=mastercodesid.positionid.positionname&fields[]=mastercodesid.mastercodesid&fields[]=pim_mpn.pim_mpn_mpnid.brandid.brandlogo.id&fields[]=pim_mpn.pim_mpn_mpnid.brandid.brandlogo.type&fields[]=pim_mpn.pim_mpn_mpnid.brandid.brandlogo.title&fields[]=pim_mpn.pim_mpn_mpnid.mpn&fields[]=pim_mpn._requires&fields[]=pim_mpn.id&fields[]=sku&fields[]=status&fields[]=id&sort[]=id&page=1&filter=%7B%22status%22:%7B%22_neq%22:%22archived%22%7D%7D&meta[]=filter_count&meta[]=total_count',
+        'url': 'http://tlacuache.racing:8055/items/pm_products?limit=25&fields[]=mastercodesid.partid.partname&fields[]=mastercodesid.positionid.positionname&fields[]=mastercodesid.mastercodesid&fields[]=pim_mpn.pim_mpn_mpnid.brandid.brandlogo.id&fields[]=pim_mpn.pim_mpn_mpnid.brandid.brandlogo.type&fields[]=pim_mpn.pim_mpn_mpnid.brandid.brandlogo.title&fields[]=pim_mpn.pim_mpn_mpnid.mpn&fields[]=pim_mpn._requires&fields[]=pim_mpn.id&fields[]=sku&fields[]=status&fields[]=id&sort[]=id&page=1&filter=%7B%22status%22:%7B%22_neq%22:%22archived%22%7D%7D&meta[]=filter_count&meta[]=total_count',
         'headers': {
             'Authorization': `Bearer ${userToken}`,
             'Content-Type': 'application/json',
@@ -189,6 +186,10 @@ router.get('/addproduct', (req, res) => {
 
 router.get('/mercadolibre', (req, res) => {
     res.render('mercadolibre');
+});
+
+router.get('/admin/test', (req, res) => {
+    res.render('test');
 });
 
 module.exports = router;

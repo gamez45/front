@@ -1,0 +1,3459 @@
+<!DOCTYPE html>
+<html lang="en-US">
+        
+<head>
+    <meta charset="utf-8">
+    <base href="/admin/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="width">
+    <meta name="msapplication-TileColor" content="#263238">
+    <meta name="theme-color" content="#263238">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#263238">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/icons/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/icons/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-2048-2732.jpg"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-2732-2048.jpg"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-1668-2388.jpg"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-2388-1668.jpg"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-1536-2048.jpg"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-2048-1536.jpg"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-1668-2224.jpg"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-2224-1668.jpg"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-1620-2160.jpg"
+        media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-2160-1620.jpg"
+        media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-1242-2688.jpg"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-2688-1242.jpg"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-1125-2436.jpg"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-2436-1125.jpg"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-828-1792.jpg"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-1792-828.jpg"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-1242-2208.jpg"
+        media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-2208-1242.jpg"
+        media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-750-1334.jpg"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-1334-750.jpg"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-640-1136.jpg"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="img/splashscreens/apple-splash-1136-640.jpg"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <title>Menus</title>
+    <style id="custom-css"></style>
+    <script type="module" crossorigin="" src="index.b5d16ba8.js"></script>
+    <link rel="modulepreload" href="assets/vendor.c46e17d6.js">
+    <link rel="modulepreload" href="assets/use-sync.864aa3cf.js">
+    <link rel="stylesheet" href="assets/vendor.fe7856f0.css">
+    <link rel="stylesheet" href="assets/index.972d7652.css">
+    <style type="text/css">
+        .cdx-notify--error {
+            background: #fffbfb !important
+        }
+
+        .cdx-notify--error::before {
+            background: #fb5d5d !important
+        }
+
+        .cdx-notify__input {
+            max-width: 130px;
+            padding: 5px 10px;
+            background: #f7f7f7;
+            border: 0;
+            border-radius: 3px;
+            font-size: 13px;
+            color: #656b7c;
+            outline: 0
+        }
+
+        .cdx-notify__input:-ms-input-placeholder {
+            color: #656b7c
+        }
+
+        .cdx-notify__input::placeholder {
+            color: #656b7c
+        }
+
+        .cdx-notify__input:focus:-ms-input-placeholder {
+            color: rgba(101, 107, 124, .3)
+        }
+
+        .cdx-notify__input:focus::placeholder {
+            color: rgba(101, 107, 124, .3)
+        }
+
+        .cdx-notify__button {
+            border: none;
+            border-radius: 3px;
+            font-size: 13px;
+            padding: 5px 10px;
+            cursor: pointer
+        }
+
+        .cdx-notify__button:last-child {
+            margin-left: 10px
+        }
+
+        .cdx-notify__button--cancel {
+            background: #f2f5f7;
+            box-shadow: 0 2px 1px 0 rgba(16, 19, 29, 0);
+            color: #656b7c
+        }
+
+        .cdx-notify__button--cancel:hover {
+            background: #eee
+        }
+
+        .cdx-notify__button--confirm {
+            background: #34c992;
+            box-shadow: 0 1px 1px 0 rgba(18, 49, 35, .05);
+            color: #fff
+        }
+
+        .cdx-notify__button--confirm:hover {
+            background: #33b082
+        }
+
+        .cdx-notify__btns-wrapper {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+            margin-top: 5px
+        }
+
+        .cdx-notify__cross {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 10px;
+            height: 10px;
+            padding: 5px;
+            opacity: .54;
+            cursor: pointer
+        }
+
+        .cdx-notify__cross::after,
+        .cdx-notify__cross::before {
+            content: '';
+            position: absolute;
+            left: 9px;
+            top: 5px;
+            height: 12px;
+            width: 2px;
+            background: #575d67
+        }
+
+        .cdx-notify__cross::before {
+            transform: rotate(-45deg)
+        }
+
+        .cdx-notify__cross::after {
+            transform: rotate(45deg)
+        }
+
+        .cdx-notify__cross:hover {
+            opacity: 1
+        }
+
+        .cdx-notifies {
+            position: fixed;
+            z-index: 2;
+            bottom: 20px;
+            left: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+        }
+
+        .cdx-notify {
+            position: relative;
+            width: 220px;
+            margin-top: 15px;
+            padding: 13px 16px;
+            background: #fff;
+            box-shadow: 0 11px 17px 0 rgba(23, 32, 61, .13);
+            border-radius: 5px;
+            font-size: 14px;
+            line-height: 1.4em;
+            word-wrap: break-word
+        }
+
+        .cdx-notify::before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: calc(100% - 6px);
+            margin: 3px;
+            border-radius: 5px;
+            background: 0 0
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(.3)
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.05)
+            }
+
+            70% {
+                transform: scale(.9)
+            }
+
+            100% {
+                transform: scale(1)
+            }
+        }
+
+        .cdx-notify--bounce-in {
+            animation-name: bounceIn;
+            animation-duration: .6s;
+            animation-iteration-count: 1
+        }
+
+        .cdx-notify--success {
+            background: #fafffe !important
+        }
+
+        .cdx-notify--success::before {
+            background: #41ffb1 !important
+        }
+    </style>
+    <style>
+        .ce-paragraph {
+            line-height: 1.6em;
+            outline: none;
+        }
+
+        .ce-paragraph[data-placeholder]:empty::before {
+            content: attr(data-placeholder);
+            color: #707684;
+            font-weight: normal;
+            opacity: 0;
+        }
+
+        /** Show placeholder at the first paragraph if Editor is empty */
+        .codex-editor--empty .ce-block:first-child .ce-paragraph[data-placeholder]:empty::before {
+            opacity: 1;
+        }
+
+        .codex-editor--toolbox-opened .ce-block:first-child .ce-paragraph[data-placeholder]:empty::before,
+        .codex-editor--empty .ce-block:first-child .ce-paragraph[data-placeholder]:empty:focus::before {
+            opacity: 0;
+        }
+
+        .ce-paragraph p:first-of-type {
+            margin-top: 0;
+        }
+
+        .ce-paragraph p:last-of-type {
+            margin-bottom: 0;
+        }
+    </style>
+    <style type="text/css">
+        .cdx-simple-image {}
+
+        .cdx-simple-image .cdx-loader {
+            min-height: 200px;
+        }
+
+        .cdx-simple-image .cdx-input {
+            margin-top: 10px;
+        }
+
+        .cdx-simple-image img {
+            max-width: 100%;
+            vertical-align: bottom;
+        }
+
+        .cdx-simple-image__caption[contentEditable=true][data-placeholder]:empty::before {
+            position: absolute;
+            content: attr(data-placeholder);
+            color: #707684;
+            font-weight: normal;
+            opacity: 0;
+        }
+
+        .cdx-simple-image__caption[contentEditable=true][data-placeholder]:empty::before {
+            opacity: 1;
+        }
+
+        .cdx-simple-image__caption[contentEditable=true][data-placeholder]:empty:focus::before {
+            opacity: 0;
+        }
+
+
+        .cdx-simple-image__picture--with-background {
+            background: #eff2f5;
+            padding: 10px;
+        }
+
+        .cdx-simple-image__picture--with-background img {
+            display: block;
+            max-width: 60%;
+            margin: 0 auto;
+        }
+
+        .cdx-simple-image__picture--with-border {
+            border: 1px solid #e8e8eb;
+            padding: 1px;
+        }
+
+        .cdx-simple-image__picture--stretched img {
+            max-width: none;
+            width: 100%;
+        }
+    </style>
+    <style>
+        .ce-paragraph {
+            line-height: 1.6em;
+            outline: none;
+        }
+
+        .ce-paragraph[data-placeholder]:empty::before {
+            content: attr(data-placeholder);
+            color: #707684;
+            font-weight: normal;
+            opacity: 0;
+        }
+
+        /** Show placeholder at the first paragraph if Editor is empty */
+        .codex-editor--empty .ce-block:first-child .ce-paragraph[data-placeholder]:empty::before {
+            opacity: 1;
+        }
+
+        .codex-editor--toolbox-opened .ce-block:first-child .ce-paragraph[data-placeholder]:empty::before,
+        .codex-editor--empty .ce-block:first-child .ce-paragraph[data-placeholder]:empty:focus::before {
+            opacity: 0;
+        }
+
+        .ce-paragraph p:first-of-type {
+            margin-top: 0;
+        }
+
+        .ce-paragraph p:last-of-type {
+            margin-bottom: 0;
+        }
+    </style>
+    <style type="text/css">
+        .cdx-quote-icon svg {
+            transform: rotate(180deg);
+        }
+
+        .cdx-quote {
+            margin: 0;
+        }
+
+        .cdx-quote__text {
+            min-height: 158px;
+            margin-bottom: 10px;
+        }
+
+        .cdx-quote__caption {}
+
+        .cdx-quote [contentEditable=true][data-placeholder]::before {
+            position: absolute;
+            content: attr(data-placeholder);
+            color: #707684;
+            font-weight: normal;
+            opacity: 0;
+        }
+
+        .cdx-quote [contentEditable=true][data-placeholder]:empty::before {
+            opacity: 1;
+        }
+
+        .cdx-quote [contentEditable=true][data-placeholder]:empty:focus::before {
+            opacity: 0;
+        }
+
+
+        .cdx-quote-settings {
+            display: flex;
+        }
+
+        .cdx-quote-settings .cdx-settings-button {
+            width: 50%;
+        }
+    </style>
+    <style type="text/css">
+        .cdx-warning {
+            position: relative;
+        }
+
+        .cdx-warning [contentEditable=true][data-placeholder]::before {
+            position: absolute;
+            content: attr(data-placeholder);
+            color: #707684;
+            font-weight: normal;
+            opacity: 0;
+        }
+
+        .cdx-warning [contentEditable=true][data-placeholder]:empty::before {
+            opacity: 1;
+        }
+
+        .cdx-warning [contentEditable=true][data-placeholder]:empty:focus::before {
+            opacity: 0;
+        }
+
+
+        .cdx-warning::before {
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 320 294' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath fill='%237B7E89' d='M160.5 97c12.426 0 22.5 10.074 22.5 22.5v28c0 12.426-10.074 22.5-22.5 22.5S138 159.926 138 147.5v-28c0-12.426 10.074-22.5 22.5-22.5zm0 83c14.636 0 26.5 11.864 26.5 26.5S175.136 233 160.5 233 134 221.136 134 206.5s11.864-26.5 26.5-26.5zm-.02-135c-6.102 0-14.05 8.427-23.842 25.28l-74.73 127.605c-12.713 21.444-17.806 35.025-15.28 40.742 2.527 5.717 8.519 9.175 17.974 10.373h197.255c5.932-1.214 10.051-4.671 12.357-10.373 2.307-5.702-1.812-16.903-12.357-33.603L184.555 70.281C174.608 53.427 166.583 45 160.48 45zm154.61 165.418c2.216 6.027 3.735 11.967 4.393 18.103.963 8.977.067 18.035-3.552 26.98-7.933 19.612-24.283 33.336-45.054 37.586l-4.464.913H61.763l-2.817-.357c-10.267-1.3-19.764-4.163-28.422-9.16-11.051-6.377-19.82-15.823-25.055-27.664-4.432-10.03-5.235-19.952-3.914-29.887.821-6.175 2.486-12.239 4.864-18.58 3.616-9.64 9.159-20.55 16.718-33.309L97.77 47.603c6.469-11.125 12.743-20.061 19.436-27.158 4.62-4.899 9.562-9.07 15.206-12.456C140.712 3.01 150.091 0 160.481 0c10.358 0 19.703 2.99 27.989 7.933 5.625 3.356 10.563 7.492 15.193 12.354 6.735 7.072 13.08 15.997 19.645 27.12l.142.24 76.986 134.194c6.553 10.46 11.425 19.799 14.654 28.577z'/%3E%3C/svg%3E");
+            width: 18px;
+            height: 18px;
+            background-size: 18px 18px;
+            position: absolute;
+            margin-top: 12px;
+            left: -30px;
+        }
+
+        @media all and (max-width: 735px) {
+            .cdx-warning::before {
+                display: none;
+            }
+        }
+
+        .cdx-warning__message {
+            min-height: 85px;
+        }
+
+        .cdx-warning__title {
+            margin-bottom: 6px;
+        }
+    </style>
+    <style type="text/css">
+        .cdx-checklist__item {
+            display: flex;
+            box-sizing: content-box;
+        }
+
+        .cdx-checklist__item-text {
+            outline: none;
+            flex-grow: 1;
+            padding: 5px 0;
+        }
+
+        .cdx-checklist__item-checkbox {
+            display: inline-block;
+            flex-shrink: 0;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            margin-left: 0;
+            margin-right: 7px;
+            border-radius: 50%;
+            border: 1px solid #d0d0d0;
+            background: #fff;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .cdx-checklist__item-checkbox:hover {
+            border-color: #b5b5b5;
+        }
+
+        .cdx-checklist__item-checkbox::after {
+            position: absolute;
+            top: 6px;
+            left: 5px;
+            width: 9px;
+            height: 4px;
+            border: 2px solid #fff;
+            border-top: none;
+            border-right: none;
+            background: transparent;
+            content: '';
+            opacity: 0;
+            transform: rotate(-45deg);
+        }
+
+        .cdx-checklist__item--checked .cdx-checklist__item-checkbox {
+            background: #388ae5;
+            border-color: #388ae5;
+        }
+
+        .cdx-checklist__item--checked .cdx-checklist__item-checkbox:hover {
+            background: #307cd1;
+        }
+
+        .cdx-checklist__item--checked .cdx-checklist__item-checkbox::after {
+            opacity: 1;
+        }
+    </style>
+    <style type="text/css">
+        .ce-delimiter {
+            line-height: 1.6em;
+            width: 100%;
+            text-align: center;
+        }
+
+        .ce-delimiter:before {
+            display: inline-block;
+            content: "***";
+            font-size: 30px;
+            line-height: 65px;
+            height: 30px;
+            letter-spacing: 0.2em;
+        }
+    </style>
+    <style type="text/css">
+        .tc-wrap {
+            --color-background: #f9f9fb;
+            --color-text-secondary: #7b7e89;
+            --color-border: #e8e8eb;
+            --cell-size: 34px;
+            --toolbox-icon-size: 18px;
+            --toolbox-padding: 6px;
+            --toolbox-aiming-field-size: calc(var(--toolbox-icon-size) + 2*var(--toolbox-padding));
+            border-left: 0;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            margin-top: var(--toolbox-icon-size);
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: calc(100% - var(--cell-size)) var(--cell-size);
+        }
+
+        .tc-wrap--readonly {
+            grid-template-columns: 100% var(--cell-size)
+        }
+
+        .tc-wrap svg {
+            vertical-align: top;
+            fill: currentColor
+        }
+
+        .tc-table {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            font-size: 14px;
+            border-top: 1px solid var(--color-border);
+            line-height: 1.4;
+        }
+
+        .tc-table:after {
+            width: var(--cell-size);
+            height: 100%;
+            left: calc(-1*var(--cell-size));
+            top: 0
+        }
+
+        .tc-table:after,
+        .tc-table:before {
+            position: absolute;
+            content: ""
+        }
+
+        .tc-table:before {
+            width: 100%;
+            height: var(--toolbox-aiming-field-size);
+            top: calc(-1*var(--toolbox-aiming-field-size));
+            left: 0
+        }
+
+        .tc-table--heading .tc-row:first-child {
+            font-weight: 600;
+            border-bottom: 2px solid var(--color-border);
+        }
+
+        .tc-table--heading .tc-row:first-child [contenteditable]:empty:before {
+            content: attr(heading);
+            color: var(--color-text-secondary)
+        }
+
+        .tc-table--heading .tc-row:first-child:after {
+            bottom: -2px;
+            border-bottom: 2px solid var(--color-border)
+        }
+
+        .tc-add-column,
+        .tc-add-row {
+            display: flex;
+            color: var(--color-text-secondary)
+        }
+
+        .tc-add-column {
+            padding: 9px 0;
+            justify-content: center;
+            border-top: 1px solid var(--color-border)
+        }
+
+        .tc-add-row {
+            height: var(--cell-size);
+            align-items: center;
+            padding-left: 12px;
+            position: relative;
+        }
+
+        .tc-add-row:before {
+            content: "";
+            position: absolute;
+            right: calc(-1*var(--cell-size));
+            width: var(--cell-size);
+            height: 100%
+        }
+
+        .tc-add-column,
+        .tc-add-row {
+            transition: 0s;
+            cursor: pointer;
+            will-change: background-color;
+        }
+
+        .tc-add-column:hover,
+        .tc-add-row:hover {
+            transition: background-color .1s ease;
+            background-color: var(--color-background)
+        }
+
+        .tc-add-row {
+            margin-top: 1px;
+        }
+
+        .tc-add-row:hover:before {
+            transition: .1s;
+            background-color: var(--color-background)
+        }
+
+        .tc-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+            position: relative;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .tc-row:after {
+            content: "";
+            pointer-events: none;
+            position: absolute;
+            width: var(--cell-size);
+            height: 100%;
+            bottom: -1px;
+            right: calc(-1*var(--cell-size));
+            border-bottom: 1px solid var(--color-border)
+        }
+
+        .tc-row--selected {
+            background: var(--color-background)
+        }
+
+        .tc-row--selected:after {
+            background: var(--color-background)
+        }
+
+        .tc-cell {
+            border-right: 1px solid var(--color-border);
+            padding: 6px 12px;
+            overflow: hidden;
+            outline: none;
+            line-break: normal;
+        }
+
+        .tc-cell--selected {
+            background: var(--color-background)
+        }
+
+        .tc-wrap--readonly .tc-row:after {
+            display: none
+        }
+
+        .tc-toolbox {
+            --toolbox-padding: 6px;
+            --popover-margin: 30px;
+            --toggler-click-zone-size: 30px;
+            --toggler-dots-color: #7b7e89;
+            --toggler-dots-color-hovered: #1d202b;
+            position: absolute;
+            cursor: pointer;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity .1s;
+            will-change: left, opacity;
+        }
+
+        .tc-toolbox--column {
+            top: calc(-1*var(--toggler-click-zone-size));
+            -webkit-transform: translateX(calc(-1*var(--toggler-click-zone-size)/2));
+            transform: translateX(calc(-1*var(--toggler-click-zone-size)/2));
+            will-change: left, opacity
+        }
+
+        .tc-toolbox--row {
+            left: calc(-1*var(--popover-margin));
+            -webkit-transform: translateY(calc(-1*var(--toggler-click-zone-size)/2));
+            transform: translateY(calc(-1*var(--toggler-click-zone-size)/2));
+            margin-top: -1px;
+            will-change: top, opacity
+        }
+
+        .tc-toolbox--showed {
+            opacity: 1
+        }
+
+        .tc-toolbox .tc-popover {
+            position: absolute;
+            top: 0;
+            left: var(--popover-margin)
+        }
+
+        .tc-toolbox__toggler {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--toggler-click-zone-size);
+            height: var(--toggler-click-zone-size);
+            color: var(--toggler-dots-color);
+            opacity: 0;
+            transition: opacity .15s ease;
+            will-change: opacity;
+        }
+
+        .tc-toolbox__toggler:hover {
+            color: var(--toggler-dots-color-hovered)
+        }
+
+        .tc-wrap:hover .tc-toolbox__toggler {
+            opacity: 1
+        }
+
+        .tc-settings .cdx-settings-button {
+            width: 50%;
+            margin: 0
+        }
+
+        .tc-popover {
+            --color-border: #eaeaea;
+            --color-background: #fff;
+            --color-background-hover: rgba(232, 232, 235, 0.49);
+            --color-background-confirm: #e24a4a;
+            --color-background-confirm-hover: #d54040;
+            --color-text-confirm: #fff;
+            background: var(--color-background);
+            border: 1px solid var(--color-border);
+            box-shadow: 0 3px 15px -3px rgba(13, 20, 33, .13);
+            border-radius: 6px;
+            padding: 6px;
+            display: none;
+            will-change: opacity, transform;
+        }
+
+        .tc-popover--opened {
+            display: block;
+            -webkit-animation: menuShowing .1s cubic-bezier(.215, .61, .355, 1) forwards;
+            animation: menuShowing .1s cubic-bezier(.215, .61, .355, 1) forwards
+        }
+
+        .tc-popover__item {
+            display: flex;
+            align-items: center;
+            padding: 2px 14px 2px 2px;
+            border-radius: 5px;
+            cursor: pointer;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .tc-popover__item:hover {
+            background: var(--color-background-hover)
+        }
+
+        .tc-popover__item:not(:last-of-type) {
+            margin-bottom: 2px
+        }
+
+        .tc-popover__item-icon {
+            display: inline-flex;
+            width: 26px;
+            height: 26px;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-background);
+            border-radius: 5px;
+            border: 1px solid var(--color-border);
+            margin-right: 8px
+        }
+
+        .tc-popover__item-label {
+            line-height: 22px;
+            font-size: 14px;
+            font-weight: 500
+        }
+
+        .tc-popover__item--confirm {
+            background: var(--color-background-confirm);
+            color: var(--color-text-confirm);
+        }
+
+        .tc-popover__item--confirm:hover {
+            background-color: var(--color-background-confirm-hover)
+        }
+
+        .tc-popover__item--confirm .tc-popover__item-icon {
+            background: var(--color-background-confirm);
+            border-color: rgba(0, 0, 0, .1);
+        }
+
+        .tc-popover__item--confirm .tc-popover__item-icon svg {
+            transition: -webkit-transform .2s ease-in;
+            transition: transform .2s ease-in;
+            transition: transform .2s ease-in, -webkit-transform .2s ease-in;
+            -webkit-transform: rotate(90deg) scale(1.2);
+            transform: rotate(90deg) scale(1.2)
+        }
+
+        .tc-popover__item--hidden {
+            display: none
+        }
+
+        @-webkit-keyframes menuShowing {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(-8px) scale(.9);
+                transform: translateY(-8px) scale(.9)
+            }
+
+            70% {
+                opacity: 1;
+                -webkit-transform: translateY(2px);
+                transform: translateY(2px)
+            }
+
+            to {
+                -webkit-transform: translateY(0);
+                transform: translateY(0)
+            }
+        }
+
+        @keyframes menuShowing {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(-8px) scale(.9);
+                transform: translateY(-8px) scale(.9)
+            }
+
+            70% {
+                opacity: 1;
+                -webkit-transform: translateY(2px);
+                transform: translateY(2px)
+            }
+
+            to {
+                -webkit-transform: translateY(0);
+                transform: translateY(0)
+            }
+        }
+    </style>
+    <style>
+        .ce-code__textarea {
+            min-height: 200px;
+            font-family: Menlo, Monaco, Consolas, Courier New, monospace;
+            color: #41314e;
+            line-height: 1.6em;
+            font-size: 12px;
+            background: #f8f7fa;
+            border: 1px solid #f1f1f4;
+            box-shadow: none;
+            white-space: pre;
+            word-wrap: normal;
+            overflow-x: auto;
+            resize: vertical;
+        }
+    </style>
+    <style type="text/css">
+        /**
+* Plugin styles
+*/
+        .ce-header {
+            padding: 1em 0;
+            margin: 0;
+            margin-bottom: -0.9em;
+            line-height: 1.5em;
+            outline: none;
+        }
+
+        .ce-header p,
+        .ce-header div {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        /**
+* Styles for Plugin icon in Toolbar
+*/
+        .ce-header__icon {}
+
+        .ce-header[contentEditable=true][data-placeholder]::before {
+            position: absolute;
+            content: attr(data-placeholder);
+            color: #707684;
+            font-weight: normal;
+            display: none;
+            cursor: text;
+        }
+
+        .ce-header[contentEditable=true][data-placeholder]:empty::before {
+            display: block;
+        }
+
+        .ce-header[contentEditable=true][data-placeholder]:empty:focus::before {
+            display: none;
+        }
+    </style>
+    <style>
+        .cdx-underline {
+            text-decoration: underline;
+        }
+    </style>
+    <style>
+        .embed-tool--loading .embed-tool__caption {
+            display: none;
+        }
+
+        .embed-tool--loading .embed-tool__preloader {
+            display: block;
+        }
+
+        .embed-tool--loading .embed-tool__content {
+            display: none;
+        }
+
+        .embed-tool__preloader {
+            display: none;
+            position: relative;
+            height: 200px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #e6e9eb;
+        }
+
+        .embed-tool__preloader::before {
+            content: '';
+            position: absolute;
+            z-index: 3;
+            left: 50%;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            margin-top: -25px;
+            margin-left: -15px;
+            border-radius: 50%;
+            border: 2px solid #cdd1e0;
+            border-top-color: #388ae5;
+            box-sizing: border-box;
+            animation: embed-preloader-spin 2s infinite linear;
+        }
+
+        .embed-tool__url {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 250px;
+            color: #7b7e89;
+            font-size: 11px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .embed-tool__content {
+            width: 100%;
+        }
+
+        .embed-tool__caption {
+            margin-top: 7px;
+        }
+
+        .embed-tool__caption[contentEditable=true][data-placeholder]::before {
+            position: absolute;
+            content: attr(data-placeholder);
+            color: #707684;
+            font-weight: normal;
+            opacity: 0;
+        }
+
+        .embed-tool__caption[contentEditable=true][data-placeholder]:empty::before {
+            opacity: 1;
+        }
+
+        .embed-tool__caption[contentEditable=true][data-placeholder]:empty:focus::before {
+            opacity: 0;
+        }
+
+        @keyframes embed-preloader-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <style type="text/css">
+        .cdx-marker {
+            background: rgba(245, 235, 111, 0.29);
+            padding: 3px 0;
+        }
+    </style>
+    <style type="text/css">
+        .ce-rawtool__textarea {
+            min-height: 200px;
+            resize: vertical;
+            border-radius: 8px;
+            border: 0;
+            background-color: #1e2128;
+            font-family: Menlo, Monaco, Consolas, Courier New, monospace;
+            font-size: 12px;
+            line-height: 1.6;
+            letter-spacing: -0.2px;
+            color: #a1a7b6;
+            overscroll-behavior: contain;
+        }
+    </style>
+    <style type="text/css">
+        .inline-code {
+            background: rgba(250, 239, 240, 0.78);
+            color: #b44437;
+            padding: 3px 4px;
+            border-radius: 5px;
+            margin: 0 1px;
+            font-family: inherit;
+            font-size: 0.86em;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+    </style>
+    <style>
+        .cdx-alert {
+            position: relative;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .cdx-alert__message {
+            outline: none;
+        }
+
+        .cdx-alert [contentEditable='true'][data-placeholder]::before {
+            position: absolute;
+            content: attr(data-placeholder);
+            color: #707684;
+            font-weight: normal;
+            opacity: 0;
+        }
+
+        .cdx-alert [contentEditable='true'][data-placeholder]:empty::before {
+            opacity: 1;
+        }
+
+        .cdx-alert [contentEditable='true'][data-placeholder]:empty:focus::before {
+            opacity: 0;
+        }
+
+        .cdx-alert-primary {
+            background-color: #ebf8ff;
+            border: 1px solid #4299e1;
+            color: #2b6cb0;
+        }
+
+        .cdx-alert-secondary {
+            background-color: #f7fafc;
+            border: 1px solid #cbd5e0;
+            color: #222731;
+        }
+
+        .cdx-alert-info {
+            background-color: #e6fdff;
+            border: 1px solid #4cd4ce;
+            color: #00727c;
+        }
+
+        .cdx-alert-success {
+            background-color: #f0fff4;
+            border: 1px solid #68d391;
+            color: #2f855a;
+        }
+
+        .cdx-alert-warning {
+            background-color: #fffaf0;
+            border: 1px solid #ed8936;
+            color: #c05621;
+        }
+
+        .cdx-alert-danger {
+            background-color: #fff5f5;
+            border: 1px solid #fc8181;
+            color: #c53030;
+        }
+
+        .cdx-alert-light {
+            background-color: #fff;
+            border: 1px solid #edf2f7;
+            color: #1a202c;
+        }
+
+        .cdx-alert-dark {
+            background-color: #2d3748;
+            border: 1px solid #1a202c;
+            color: #d3d3d3;
+        }
+
+        .cdx-alert.cdx-settings-button {
+            margin: 3px;
+            width: 28px;
+            height: 28px;
+            opacity: 0.5;
+        }
+
+        .cdx-alert.cdx-settings-button:hover {
+            opacity: 1;
+        }
+
+        .cdx-alert.cdx-settings-button--active,
+        .cdx-alert.ce-settings__button--focused {
+            font-weight: bold;
+            opacity: 0.9;
+        }
+    </style>
+    <style>
+        .cdx-list {
+            margin: 0;
+            padding-left: 40px;
+            outline: none;
+        }
+
+        .cdx-list__item {
+            padding: 5.5px 0 5.5px 3px;
+            line-height: 1.6em;
+        }
+
+        .cdx-list--unordered {
+            list-style: disc;
+        }
+
+        .cdx-list--ordered {
+            list-style: decimal;
+        }
+
+        .cdx-list-settings {
+            display: flex;
+        }
+
+        .cdx-list-settings .cdx-settings-button {
+            width: 50%;
+        }
+
+        .cdx-settings-button:nth-child(n+4) {
+            margin-top: 0;
+        }
+
+        .cdx-settings-button:not(:nth-child(3n+3)) {
+            margin-right: 0;
+        }
+    </style>
+    <style>
+        .image-tool {
+            --bg-color: #cdd1e0;
+            --front-color: #388ae5;
+            --border-color: #e8e8eb;
+        }
+
+        .image-tool__image {
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .image-tool__image-picture {
+            max-width: 100%;
+            vertical-align: bottom;
+            display: block;
+        }
+
+        .image-tool__image-preloader {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-size: cover;
+            margin: auto;
+            position: relative;
+            background-color: var(--bg-color);
+            background-position: center center;
+        }
+
+        .image-tool__image-preloader::after {
+            content: "";
+            position: absolute;
+            z-index: 3;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid var(--bg-color);
+            border-top-color: var(--front-color);
+            left: 50%;
+            top: 50%;
+            margin-top: -30px;
+            margin-left: -30px;
+            animation: image-preloader-spin 2s infinite linear;
+            box-sizing: border-box;
+        }
+
+        .image-tool__caption[contentEditable="true"][data-placeholder]::before {
+            position: absolute !important;
+            content: attr(data-placeholder);
+            color: #707684;
+            font-weight: normal;
+            display: none;
+        }
+
+        .image-tool__caption[contentEditable="true"][data-placeholder]:empty::before {
+            display: block;
+        }
+
+        .image-tool__caption[contentEditable="true"][data-placeholder]:empty:focus::before {
+            display: none;
+        }
+
+        .image-tool--empty .image-tool__image {
+            display: none;
+        }
+
+        .image-tool--empty .image-tool__caption,
+        .image-tool--loading .image-tool__caption {
+            display: none;
+        }
+
+        .image-tool--filled .cdx-button {
+            display: none;
+        }
+
+        .image-tool--filled .image-tool__image-preloader {
+            display: none;
+        }
+
+        .image-tool--loading .image-tool__image {
+            min-height: 200px;
+            display: flex;
+            border: 1px solid var(--border-color);
+            background-color: #fff;
+        }
+
+        .image-tool--loading .image-tool__image-picture {
+            display: none;
+        }
+
+        .image-tool--loading .cdx-button {
+            display: none;
+        }
+
+        /**
+* Tunes
+* ----------------
+*/
+
+        .image-tool--withBorder .image-tool__image {
+            border: 1px solid var(--border-color);
+        }
+
+        .image-tool--withBackground .image-tool__image {
+            padding: 15px;
+            background: var(--bg-color);
+        }
+
+        .image-tool--withBackground .image-tool__image-picture {
+            max-width: 60%;
+            margin: 0 auto;
+        }
+
+        .image-tool--stretched .image-tool__image-picture {
+            width: 100%;
+        }
+
+        @keyframes image-preloader-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <style type="text/css">
+        .cdx-personality {
+            padding: 30px;
+            margin: 0.7em 0;
+            border: 1px solid #e5e6ec;
+            border-radius: 3px;
+            background: #fff;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+        }
+
+        .cdx-personality::after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+
+        .cdx-personality [contentEditable=true][data-placeholder]::before {
+            position: absolute;
+            content: attr(data-placeholder);
+            color: #707684;
+            font-weight: normal;
+            opacity: 0;
+        }
+
+        .cdx-personality [contentEditable=true][data-placeholder]:empty::before {
+            opacity: 1;
+        }
+
+        .cdx-personality [contentEditable=true][data-placeholder]:empty:focus::before {
+            opacity: 0.3;
+        }
+
+        .cdx-personality__photo {
+            float: right;
+            width: 70px;
+            height: 70px;
+            margin-left: 30px;
+            border-radius: 3px;
+            background: #f6f6f9 url('data:image/svg+xml,<svg fill="rgb(171, 175, 188)" width="35" height="41" xmlns="http://www.w3.org/2000/svg"><path d="M17.347 22.087h.272c2.495-.042 4.514-.916 6.004-2.589 3.278-3.684 2.733-10 2.674-10.602-.213-4.524-2.359-6.689-4.13-7.7C20.847.442 19.305.035 17.585 0H17.441c-.946 0-2.802.153-4.582 1.163-1.788 1.01-3.968 3.175-4.181 7.733-.06.603-.605 6.918 2.674 10.602 1.481 1.673 3.5 2.547 5.995 2.59zM10.95 9.108c0-.025.009-.05.009-.068.28-6.086 4.615-6.74 6.472-6.74H17.534c2.3.051 6.208.985 6.472 6.74 0 .026 0 .051.009.068.008.06.604 5.832-2.104 8.87-1.073 1.206-2.503 1.8-4.385 1.817h-.086c-1.873-.017-3.312-.61-4.377-1.816-2.7-3.022-2.12-8.82-2.112-8.87z"/><path d="M34.983 32.562v-.025c0-.068-.009-.136-.009-.212-.05-1.681-.161-5.611-3.857-6.868l-.085-.025c-3.841-.976-7.034-3.183-7.068-3.209a1.15 1.15 0 0 0-1.601.28 1.142 1.142 0 0 0 .28 1.596c.145.102 3.535 2.453 7.775 3.54 1.985.704 2.206 2.818 2.266 4.754 0 .076 0 .144.008.212.009.764-.042 1.944-.179 2.623-1.38.78-6.787 3.48-15.013 3.48-8.192 0-13.634-2.708-15.022-3.489-.136-.679-.196-1.859-.179-2.623 0-.068.009-.136.009-.212.06-1.935.28-4.049 2.265-4.754 4.24-1.086 7.63-3.446 7.775-3.54.52-.364.647-1.077.281-1.595a1.15 1.15 0 0 0-1.601-.28c-.034.025-3.21 2.232-7.068 3.208-.034.009-.06.017-.085.026C.179 26.714.068 30.644.017 32.316c0 .077 0 .144-.008.212v.026c-.009.441-.018 2.708.434 3.845.085.22.238.408.443.535.255.17 6.378 4.058 16.623 4.058 10.244 0 16.367-3.897 16.622-4.058.196-.127.358-.314.443-.535.426-1.129.417-3.395.409-3.837z"/></svg>') center center no-repeat;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .cdx-personality__name {
+            font-weight: 600;
+            outline: none;
+        }
+
+        .cdx-personality__description {
+            font-size: 0.86em;
+            margin: 10px 0;
+            outline: none;
+        }
+
+        .cdx-personality__link {
+            font-size: 0.68em;
+            color: #6e758a;
+            letter-spacing: 0.1px;
+            text-overflow: ellipsis;
+            outline: none;
+        }
+
+        .codex-editor--narrow .cdx-personality {
+            padding: 15px;
+        }
+    </style>
+    <style type="text/css">
+        .bordered[data-v-64969d30] {
+            padding: var(--input-padding);
+            background-color: var(--background-page);
+            border: var(--border-width) solid var(--border-normal);
+            border-radius: var(--border-radius);
+        }
+
+        .bordered[data-v-64969d30]:hover {
+            border-color: var(--border-normal-alt);
+        }
+
+        .bordered[data-v-64969d30]:focus-within {
+            border-color: var(--primary);
+        }
+
+        .monospace[data-v-64969d30] {
+            font-family: var(--family-monospace);
+        }
+
+        .serif[data-v-64969d30] {
+            font-family: var(--family-serif);
+        }
+
+        .sans-serif[data-v-64969d30] {
+            font-family: var(--family-sans-serif);
+        }
+    </style>
+    <style type="text/css">
+        .interface.subdued .codex-editor {
+            pointer-events: none !important;
+        }
+
+        .ce-toolbar__content,
+        .ce-block__content {
+            max-width: unset;
+            margin-right: 34px;
+            margin-left: 34px;
+        }
+
+        .codex-editor .ce-block {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            font-weight: normal;
+            font-family: inherit;
+        }
+
+        .codex-editor .ce-block h1 {
+            font-weight: 300;
+            font-size: 44px;
+            line-height: 52px;
+        }
+
+        .codex-editor .ce-block h2 {
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 38px;
+        }
+
+        .codex-editor .ce-block h3 {
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 31px;
+        }
+
+        .codex-editor .ce-block h4 {
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 28px;
+        }
+
+        .codex-editor .ce-block h5 {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        .codex-editor .ce-block h6 {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .codex-editor .ce-block p {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-family: inherit;
+            line-height: 32px;
+        }
+
+        .codex-editor .ce-block a {
+            color: var(--primary);
+        }
+
+        .codex-editor .ce-block ul,
+        .codex-editor .ce-block ol {
+            margin: 24px 0;
+            font-size: 18px;
+            line-height: 34px;
+        }
+
+        .codex-editor .ce-block ul ul,
+        .codex-editor .ce-block ol ol,
+        .codex-editor .ce-block ul ol,
+        .codex-editor .ce-block ol ul {
+            margin: 0;
+        }
+
+        .codex-editor .ce-block b,
+        .codex-editor .ce-block strong {
+            font-weight: 600;
+        }
+
+        .codex-editor .ce-block code {
+            padding: 2px 4px;
+            font-size: 18px;
+            line-height: 34px;
+            overflow-wrap: break-word;
+            background-color: var(--background-normal-alt);
+            border-radius: 4px;
+        }
+
+        .codex-editor .ce-block pre {
+            padding: 20px;
+            overflow: auto;
+            font-size: 18px;
+            line-height: 24px;
+            background-color: var(--background-normal-alt);
+            border-radius: 4px;
+        }
+
+        .codex-editor .ce-block blockquote {
+            font-size: 18px;
+            font-style: italic;
+            line-height: 34px;
+            border-left: 2px dashed var(--border-normal);
+        }
+
+        .codex-editor .ce-block video,
+        .codex-editor .ce-block iframe,
+        .codex-editor .ce-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .codex-editor .ce-block hr {
+            margin-top: 52px;
+            margin-bottom: 56px;
+            text-align: center;
+            border: 0;
+        }
+
+        .codex-editor .ce-block hr::after {
+            font-size: 28px;
+            line-height: 0;
+            letter-spacing: 16px;
+            content: '...';
+        }
+
+        .codex-editor .ce-block table {
+            border-collapse: collapse;
+        }
+
+        .codex-editor .ce-block table th,
+        .codex-editor .ce-block table td {
+            border: 1px solid var(--border-normal);
+        }
+
+        .codex-editor .ce-block .tc-table__wrap,
+        .codex-editor .ce-block .tc-table__cell {
+            border-color: var(--border-normal);
+        }
+
+        .codex-editor .ce-block figure {
+            display: table;
+            margin: 1rem auto;
+        }
+
+        .codex-editor .ce-block figure figcaption {
+            display: block;
+            margin-top: 0.25rem;
+            color: var(--foreground-subdued);
+            text-align: center;
+        }
+    </style>
+    <style type="text/css">
+        .codex-editor {
+            --bg-color: var(--background-normal) !important;
+            --front-color: var(--foreground-normal) !important;
+            --border-color: var(--border-normal) !important;
+        }
+
+        .codex-editor .ce-toolbar__settings-btn,
+        .codex-editor .ce-toolbar .ce-toolbox__button:hover {
+            background: var(--background-normal-alt);
+            border-radius: var(--border-radius);
+        }
+
+        .codex-editor .ce-toolbar__settings-btn svg {
+            fill: var(--background-inverted) !important;
+        }
+
+        .codex-editor .ce-inline-tool--align-text svg {
+            stroke: var(--v-list-color) !important;
+        }
+
+        .codex-editor .cdx-settings-button svg,
+        .codex-editor .ce-inline-toolbar__dropdown svg,
+        .codex-editor .ce-inline-toolbar .ce-inline-tool svg,
+        .codex-editor .ce-settings .ce-settings__button svg {
+            fill: var(--v-list-color) !important;
+        }
+
+        .codex-editor .ce-inline-toolbar .ce-inline-tool--active svg,
+        .codex-editor .ce-settings .cdx-settings-button--active svg,
+        .codex-editor .ce-toolbar__plus:hover svg {
+            fill: var(--primary) !important;
+        }
+
+        .codex-editor .ce-toolbar .ce-toolbox__button svg,
+        .codex-editor .ce-toolbar .ce-toolbox__button:hover svg {
+            fill: var(--foreground-normal);
+        }
+
+        .codex-editor .image-tool--loading .image-tool__image,
+        .codex-editor .ce-block--selected .ce-block__content {
+            background: var(--module-background-alt);
+        }
+
+        .codex-editor .image-tool--loading .image-tool__image {
+            border-color: var(--border-normal);
+        }
+
+        .codex-editor .ce-inline-toolbar__toggler-and-button-wrapper {
+            padding: 0;
+        }
+
+        .codex-editor .ce-inline-toolbar__dropdown {
+            margin: 0;
+            border-color: var(--border-normal);
+        }
+
+        .codex-editor .ce-inline-tool {
+            padding: 0 10px !important;
+        }
+
+        /* Button balloons */
+        .codex-editor .ce-conversion-toolbar,
+        .codex-editor .ce-inline-toolbar,
+        .codex-editor .ce-settings {
+            background: var(--background-subdued);
+            border-color: var(--border-normal);
+            border-width: var(--border-width);
+            border-radius: var(--border-radius);
+        }
+
+        .codex-editor .cdx-settings-button:hover,
+        .codex-editor .ce-conversion-tool:hover,
+        .codex-editor .ce-inline-toolbar__dropdown:hover,
+        .codex-editor .ce-inline-toolbar .ce-inline-tool:hover,
+        .codex-editor .ce-settings .ce-settings__button:hover {
+            background: var(--v-list-item-background-color-active);
+        }
+
+        .codex-editor .ce-conversion-toolbar .ce-conversion-tool--focused:not(:hover) {
+            color: var(--primary);
+            background-color: var(--v-list-item-background-color-hover) !important;
+            -webkit-box-shadow: unset;
+            box-shadow: unset;
+        }
+
+        .codex-editor .ce-conversion-tool:hover {
+            color: var(--v-list-item-color-hover);
+            background-color: var(--v-list-item-background-color-hover) !important;
+            -webkit-box-shadow: unset;
+            box-shadow: unset;
+        }
+
+        .codex-editor .ce-conversion-toolbar__label {
+            color: var(--foreground-normal);
+        }
+
+        .codex-editor .ce-conversion-tool__icon {
+            background: transparent;
+        }
+
+        /* Textarea and inputs */
+        .codex-editor [contentEditable='true'][data-placeholder]::before {
+            font-weight: unset;
+        }
+
+        .codex-editor .ce-code__textarea {
+            font-family: var(--family-monospace);
+        }
+
+        .codex-editor .cdx-input,
+        .codex-editor .ce-code__textarea {
+            color: var(--foreground-normal);
+            font-size: inherit;
+            background-color: var(--background-page);
+            border: var(--border-width) solid var(--border-normal);
+            border-radius: var(--border-radius);
+            box-shadow: unset;
+        }
+
+        .codex-editor .cdx-input:hover,
+        .codex-editor .ce-code__textarea:hover {
+            border-color: var(--border-normal-alt);
+        }
+
+        .codex-editor .cdx-input:focus,
+        .codex-editor .ce-code__textarea:focus {
+            border-color: var(--primary);
+        }
+
+        .codex-editor .ce-inline-tool-input {
+            color: var(--primary);
+            background: var(--background-normal);
+            border-top-color: var(--border-normal);
+        }
+
+        /* Buttons */
+        .codex-editor .cdx-button {
+            color: var(--v-button-color);
+            font-weight: var(--v-button-font-weight);
+            font-size: var(--v-button-font-size);
+            text-decoration: none;
+            background-color: var(--v-button-background-color);
+            border: var(--border-width) solid var(--v-button-background-color);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+        }
+
+        .codex-editor .cdx-button:hover {
+            color: var(--v-button-color-hover);
+            background-color: var(--v-button-background-color-hover);
+            border-color: var(--v-button-background-color-hover);
+        }
+
+        /* General components re-style */
+        .codex-editor .cdx-attaches,
+        .codex-editor .cdx-personality {
+            color: var(--foreground-normal);
+            background: var(--background-normal-alt);
+            border-color: var(--border-normal);
+            box-shadow: unset;
+        }
+
+        /* Quote block */
+        .codex-editor .cdx-block.cdx-quote {
+            padding-left: 22px;
+        }
+
+        /* Image Tool */
+        .codex-editor .image-tool {
+            --bg-color: var(--background-normal-alt);
+            --front-color: var(--primary);
+            --border-color: var(--border-normal);
+        }
+
+        /* Personality */
+        .codex-editor .cdx-personality__description {
+            font-weight: unset;
+            font-size: 0.9em;
+            font-style: oblique;
+        }
+
+        .codex-editor .cdx-personality .cdx-personality__photo {
+            background-color: transparent;
+        }
+
+        .codex-editor .cdx-personality__link {
+            color: var(--primary);
+            font-size: 0.72em;
+        }
+
+        /* Checklist */
+        .codex-editor .cdx-checklist__item-checkbox {
+            background: transparent;
+            border-color: var(--border-normal);
+        }
+
+        .codex-editor .cdx-checklist__item--checked .cdx-checklist__item-checkbox {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        /* Lists */
+        .codex-editor .ce-block ul,
+        .codex-editor .ce-block ol {
+            font-size: inherit;
+        }
+
+        /* Attaches */
+        .codex-editor .cdx-attaches__size {
+            color: var(--foreground-subdued);
+        }
+
+        .codex-editor .cdx-attaches--with-file .cdx-attaches__file-icon::before {
+            background: transparent;
+        }
+
+        /* InlineCode */
+        .codex-editor .ce-block code {
+            color: var(--warning-10);
+            font-size: inherit;
+            background: var(--warning-175);
+        }
+
+        /* Marker */
+        .codex-editor .cdx-marker {
+            background: var(--warning-alt);
+        }
+
+        /* tc module */
+        .codex-editor .tc-wrap {
+            --color-background: var(--v-list-item-color-hover);
+            --color-border: var(--border-normal);
+            --color-background-hover: var(--v-list-item-background-color-hover);
+        }
+
+        .codex-editor .tc-popover {
+            --color-background: var(--background-normal);
+            --color-border: var(--background-normal);
+            --color-background-hover: var(--background-normal-alt);
+        }
+
+        .tc-cell--selected,
+        .tc-cell--selected::after,
+        .tc-row--selected,
+        .tc-row--selected::after {
+            background: var(--background-highlight);
+        }
+
+        .tc-toolbox__toggler:hover {
+            fill: var(--background-normal-alt) !important;
+        }
+
+        .codex-editor .tc-toolbox__toggler svg rect:first-child {
+            /* This is very ugly, but there no other way to set background of the element */
+            fill: var(--background-normal-alt) !important;
+        }
+
+        .tc-add-column:hover,
+        .tc-add-row:hover {
+            background-color: var(--primary-alt);
+        }
+
+        .tc-add-row:hover::before {
+            background-color: var(--v-list-item-background-color-hover);
+        }
+    </style>
+    <style type="text/css">
+        .trigger-button.info[data-v-64969d30] {
+            --v-button-background-color: var(--blue);
+            --v-button-background-color-hover: var(--blue-125);
+            --v-button-color: var(--blue-alt);
+            --v-button-color-hover: var(--blue-alt);
+        }
+
+        .trigger-button.success[data-v-64969d30] {
+            --v-button-background-color: var(--success);
+            --v-button-background-color-hover: var(--success-125);
+            --v-button-color: var(--success-alt);
+            --v-button-color-hover: var(--success-alt);
+        }
+
+        .trigger-button.warning[data-v-64969d30] {
+            --v-button-background-color: var(--warning);
+            --v-button-background-color-hover: var(--warning-125);
+            --v-button-color: var(--warning-alt);
+            --v-button-color-hover: var(--warning-alt);
+        }
+
+        .trigger-button.danger[data-v-64969d30] {
+            --v-button-icon-color: var(--white);
+            --v-button-background-color: var(--danger);
+            --v-button-background-color-hover: var(--danger-125);
+            --v-button-color: var(--danger-alt);
+            --v-button-color-hover: var(--danger-alt);
+        }
+
+        .v-form[data-v-64969d30] {
+            padding-top: calc(var(--form-vertical-gap) / 2);
+        }
+
+        .v-form.in-drawer[data-v-64969d30] {
+            padding-left: var(--form-horizontal-gap);
+        }
+
+        @media (max-width: 959px) {
+            .v-form.in-drawer[data-v-64969d30] {
+                padding-right: var(--form-horizontal-gap);
+            }
+        }
+    </style>
+    <style type="text/css">
+        .prefixsuffix[data-v-05639e84] {
+            color: var(--foreground-subdued);
+        }
+
+        .link-preview-mode[data-v-05639e84] {
+            display: flex;
+            align-items: center;
+            min-height: var(--input-height);
+        }
+
+        .link[data-v-05639e84] {
+            color: var(--foreground-subdued);
+            text-decoration: underline;
+        }
+
+        .link[data-v-05639e84]:not(:first-child) {
+            margin-inline-start: 8px;
+        }
+
+        .link[data-v-05639e84]:not(:last-child) {
+            margin-inline-end: 8px;
+        }
+
+        a.link[data-v-05639e84] {
+            color: var(--primary);
+        }
+
+        a.link[data-v-05639e84]:focus-visible,
+        a.link[data-v-05639e84]:hover {
+            color: var(--primary-75);
+        }
+    </style>
+    <style type="text/css">
+        .input[data-v-64969d30] {
+            position: relative;
+            display: flex;
+            flex-grow: 1;
+            align-items: center;
+            height: 100%;
+            padding: var(--input-padding);
+            padding-top: 0;
+            padding-bottom: 0;
+            color: var(--v-input-color);
+            font-family: var(--v-input-font-family);
+            background-color: var(--v-input-background-color);
+            border: var(--border-width) solid var(--border-normal);
+            border-radius: var(--border-radius);
+            transition: border-color var(--fast) var(--transition);
+        }
+
+        .input[data-v-64969d30]:hover {
+            --arrow-color: var(--border-normal-alt);
+            color: var(--v-input-color);
+            background-color: var(--background-input);
+            border-color: var(--border-normal-alt);
+        }
+
+        .input.active[data-v-64969d30],
+        .input[data-v-64969d30]:focus-within {
+            --arrow-color: var(--border-normal-alt);
+            color: var(--v-input-color);
+            background-color: var(--background-input);
+            border-color: var(--v-input-border-color-focus);
+        }
+
+        .input input[data-v-64969d30] {
+            flex-grow: 1;
+            width: 20px;
+            height: 100%;
+            padding: var(--input-padding);
+            padding-right: 0;
+            padding-left: 0;
+            font-family: var(--v-input-font-family);
+            background-color: transparent;
+            border: none;
+            appearance: none;
+        }
+
+        .code[data-v-64969d30] {
+            border: var(--border-width) solid var(--border-normal);
+            border-top: none;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            padding: 1rem;
+            padding-top: 1.5rem;
+            margin-top: -0.5rem;
+        }
+
+        .qr[data-v-64969d30] {
+            width: 300px !important;
+            height: auto !important;
+            max-width: 100%;
+        }
+
+        .qr.hidden[data-v-64969d30] {
+            display: none;
+        }
+    </style>
+    <link rel="modulepreload" as="script" crossorigin="" href="assets/index.886103e5.js">
+    <link rel="stylesheet" href="assets/index.df6ec1ee.css">
+</head>
+
+<body class="auto">
+    <noscript>
+        <strong>We're sorry but Directus doesn't work without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+
+    <div id="app" data-v-app="">
+        <div id="directus" data-v-d66a0348="" style="--brand:#0D9170;">
+            <!---->
+            <div class="private-view theme" data-v-30b662e5="" data-v-c7abd8ac="">
+                <aside id="navigation" role="navigation" aria-label="Module Navigation" class="" data-v-30b662e5="">
+                    <div class="module-bar" data-v-dd9f73e8="" data-v-30b662e5=""><a href="https://tlacuache.racing"
+                            target="_blank" rel="noopener noreferrer" class="module-bar-logo" data-v-a98d38ac=""
+                            data-v-dd9f73e8="" data-tooltip="D_FAQ0UHo-ht3xcZr9Jlr">
+                            <!----><img class="custom-logo"
+                                src="/assets/62a086fb-f363-4e76-b9bb-4065a95d8d04?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZjMjg1MDAyLWViNWUtNDA4YS04ZDdjLTFlOTZiOGZjM2Q1YyIsImlhdCI6MTYzODI2MTEzMywiZXhwIjoxNjM4MjYyMDMzLCJpc3MiOiJkaXJlY3R1cyJ9.VysTMOts1JtwlOykIm0FsxmqTwgwln-ZHKZeYpELwc0"
+                                alt="Project Logo" data-v-a98d38ac="">
+                        </a>
+                        <div class="modules" data-v-dd9f73e8="">
+                            <div class="v-button" data-v-55816638="" data-v-dd9f73e8=""
+                                data-tooltip="CFu43qCVJoKop2Yo_bGH2"><a href="/admin/users"
+                                    class="button x-large align-center icon tile normal" type="button" disabled="false"
+                                    data-v-55816638=""><span class="content" data-v-55816638=""><span class="v-icon"
+                                            outline="" data-v-73a3c90f="" data-v-dd9f73e8=""><i class=""
+                                                data-v-73a3c90f="">people_alt</i></span></span>
+                                    <div class="spinner" data-v-55816638="">
+                                        <!---->
+                                    </div>
+                                </a></div>
+                            <div class="v-button" data-v-55816638="" data-v-dd9f73e8=""
+                                data-tooltip="8XNq_uBinPqv9zWDr3-S8"><a href="/admin/files"
+                                    class="button x-large align-center icon tile normal" type="button" disabled="false"
+                                    data-v-55816638=""><span class="content" data-v-55816638=""><span class="v-icon"
+                                            outline="" data-v-73a3c90f="" data-v-dd9f73e8=""><i class=""
+                                                data-v-73a3c90f="">folder</i></span></span>
+                                    <div class="spinner" data-v-55816638="">
+                                        <!---->
+                                    </div>
+                                </a></div>
+                            <div class="v-button" data-v-55816638="" data-v-dd9f73e8=""
+                                data-tooltip="3fdfAHXTshzkKYwrw1bAt"><a href="/admin/insights"
+                                    class="button x-large align-center icon tile normal" type="button" disabled="false"
+                                    data-v-55816638=""><span class="content" data-v-55816638=""><span class="v-icon"
+                                            outline="" data-v-73a3c90f="" data-v-dd9f73e8=""><i class=""
+                                                data-v-73a3c90f="">insights</i></span></span>
+                                    <div class="spinner" data-v-55816638="">
+                                        <!---->
+                                    </div>
+                                </a></div>
+                            <div class="v-button" data-v-55816638="" data-v-dd9f73e8=""
+                                data-tooltip="oe-KbzRZP-y68APQ7pD-T"><a href="/admin/content"
+                                    class="router-link-active button x-large align-center active icon tile normal"
+                                    type="button" disabled="false" data-v-55816638=""><span class="content"
+                                        data-v-55816638=""><span class="v-icon" outline="" data-v-73a3c90f=""
+                                            data-v-dd9f73e8=""><svg viewBox="0 0 22 22"
+                                                xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                                                data-v-73a3c90f="">
+                                                <path
+                                                    d="M2.036 16.961l8.578 3.944a.886.886 0 00.772 0l8.576-3.944c.357-.164.536-.443.536-.836V5.875a.924.924 0 00-.016-.166v-.048a.95.95 0 00-.037-.118l-.014-.039a.91.91 0 00-.073-.138l-.021-.03a1.067 1.067 0 00-.081-.097l-.043-.03a.901.901 0 00-.102-.083l-.025-.018a1.003 1.003 0 00-.124-.069l-8.578-3.944a.886.886 0 00-.772 0L2.036 5.039a.935.935 0 00-.124.069l-.025.018a.901.901 0 00-.102.083l-.03.032a.915.915 0 00-.08.097l-.021.03a.916.916 0 00-.074.138l-.025.037a1.006 1.006 0 00-.037.118v.048a.924.924 0 00-.016.166v10.25c0 .393.178.671.534.836zm1.306-9.646l6.735 3.102v8.223l-6.735-3.104V7.315zm8.578 11.323v-8.221l6.735-3.102v8.223l-6.735 3.1zm-.921-15.7l6.376 2.937-6.376 2.937-6.376-2.937 6.376-2.937z">
+                                                </path>
+                                            </svg></span></span>
+                                    <div class="spinner" data-v-55816638="">
+                                        <!---->
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="module-bar-avatar" data-v-6671e61b="" data-v-dd9f73e8="">
+                            <div class="v-badge notifications-badge" data-v-5d3df5d4="" data-v-6671e61b="">
+                                <!---->
+                                <div class="v-button notifications" data-v-55816638="" data-v-6671e61b=""
+                                    data-tooltip="xdO5cQUEZOJ8ec33ctfMd"><button
+                                        class="button x-large align-center icon tile normal" type="button"
+                                        data-v-55816638=""><span class="content" data-v-55816638=""><span class="v-icon"
+                                                data-v-73a3c90f="" data-v-6671e61b=""><i class=""
+                                                    data-v-73a3c90f="">notifications</i></span></span>
+                                        <div class="spinner" data-v-55816638="">
+                                            <!---->
+                                        </div>
+                                    </button></div>
+                            </div>
+                            <div data-v-6671e61b="">
+                                <div class="v-dialog" data-v-370b296e="" data-v-6671e61b="">
+                                    <div class="v-button sign-out" data-v-55816638="" data-v-6671e61b=""
+                                        data-v-370b296e-s="" data-tooltip="4auexz8hWfatypkLxVinH"><button
+                                            class="button x-large align-center icon tile normal" type="button"
+                                            data-v-55816638=""><span class="content" data-v-55816638=""><span
+                                                    class="v-icon" data-v-73a3c90f="" data-v-6671e61b=""><svg
+                                                        viewBox="0 0 24 24" width="24" height="24" fill="none"
+                                                        fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                                                        stroke-miterlimit="2" xmlns="http://www.w3.org/2000/svg"
+                                                        data-v-73a3c90f="">
+                                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path
+                                                            d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4a2 2 0 00-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z">
+                                                        </path>
+                                                    </svg></span></span>
+                                            <div class="spinner" data-v-55816638="">
+                                                <!---->
+                                            </div>
+                                        </button></div>
+                                </div><a href="/admin/users/6c285002-eb5e-408a-8d7c-1e96b8fc3d5c" class=""
+                                    data-v-6671e61b="">
+                                    <div class="v-avatar tile large" data-v-fee7284a="" data-v-6671e61b=""
+                                        data-tooltip="DGyQ8JNzIiJqEBPejhXQ4"><img
+                                            src="/assets/86e4bd3c-1ebc-4bc4-afb9-a7468d7f281d?key=system-medium-cover&amp;access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZjMjg1MDAyLWViNWUtNDA4YS04ZDdjLTFlOTZiOGZjM2Q1YyIsImlhdCI6MTYzODI2MTEzMywiZXhwIjoxNjM4MjYyMDMzLCJpc3MiOiJkaXJlY3R1cyJ9.VysTMOts1JtwlOykIm0FsxmqTwgwln-ZHKZeYpELwc0"
+                                            alt="Luis Gamez" class="avatar-image" data-v-6671e61b=""
+                                            data-v-fee7284a-s=""></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-nav alt-colors" data-v-30b662e5="">
+                        <div class="project-info" data-v-08488eb6="" data-v-30b662e5="">
+                            <div class="latency-indicator" data-v-2cfd5c8b="" data-v-08488eb6=""
+                                data-tooltip="uHUKEFxYfnMvNZTiRfZcV"><span class="v-icon" data-v-73a3c90f=""
+                                    data-v-2cfd5c8b=""><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                                        fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                                        stroke-miterlimit="2" data-v-73a3c90f="">
+                                        <path fill-opacity=".3"
+                                            d="M24.02 42.98L47.28 14c-.9-.68-9.85-8-23.28-8S1.62 13.32.72 14l23.26 28.98.02.02.02-.02z">
+                                        </path>
+                                        <path d="M0 0h48v48H0z" fill="none"></path>
+                                        <path
+                                            d="M9.58 25.03l14.41 17.95.01.02.01-.02 14.41-17.95C37.7 24.47 32.2 20 24 20s-13.7 4.47-14.42 5.03z">
+                                        </path>
+                                    </svg></span></div><span class="name" data-v-08488eb6="">Tlacuache Racing</span>
+                        </div>
+                        <div class="module-nav-content" data-v-30b662e5="">
+                            <div class="content-navigation-wrapper" data-v-970f0324="" data-v-c7abd8ac="">
+                                <div class="search-input" data-v-970f0324="">
+                                    <div class="v-input full-width" data-v-498949c4="" data-v-970f0324="">
+                                        <!---->
+                                        <div class="input" data-v-498949c4="">
+                                            <!---->
+                                            <!----><input placeholder="Search Collection..." autocomplete="off"
+                                                type="search" step="1" data-v-498949c4="">
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </div>
+                                        <!---->
+                                    </div>
+                                </div>
+                                <ul class="v-list nav dense content-navigation" tabindex="-1" data-v-b97aaa68=""
+                                    data-v-970f0324=""><a href="/admin/content/dashboards" class="v-list-item link"
+                                        data-v-0c4fd7f4="" data-v-05859c07="">
+                                        <div class="v-list-item-icon" data-v-3a2c81de=""><span class="v-icon"
+                                                data-v-73a3c90f="" data-v-3a2c81de-s=""
+                                                style="--v-icon-color:#9C6BF1;"><i class=""
+                                                    data-v-73a3c90f="">dashboard</i></span></div>
+                                        <div class="v-list-item-content" data-v-275e8d1e="">
+                                            <div class="v-text-overflow" data-v-2955c167="" data-v-275e8d1e-s="">
+                                                Dashboards</div>
+                                        </div>
+                                    </a>
+                                    <!---->
+                                    <li class="v-list-group" data-v-2419d436="" data-v-05859c07=""><a
+                                            href="/admin/content/pm_products"
+                                            class="v-list-item link clickable activator" data-v-0c4fd7f4=""
+                                            data-v-2419d436="">
+                                            <!---->
+                                            <div class="v-list-item-icon" data-v-3a2c81de=""><span class="v-icon"
+                                                    data-v-73a3c90f="" data-v-3a2c81de-s=""
+                                                    style="--v-icon-color:#4A74C3;"><i class=""
+                                                        data-v-73a3c90f="">loyalty</i></span></div>
+                                            <div class="v-list-item-content" data-v-275e8d1e="">
+                                                <div class="v-text-overflow" data-v-2955c167="" data-v-275e8d1e-s="">Pm
+                                                    Products</div>
+                                            </div>
+                                            <div class="v-list-item-icon activator-icon" data-v-3a2c81de=""
+                                                data-v-2419d436="" data-v-0c4fd7f4-s=""><span class="v-icon"
+                                                    data-v-73a3c90f="" data-v-2419d436="" data-v-3a2c81de-s=""><i
+                                                        class="" data-v-73a3c90f="">chevron_right</i></span></div>
+                                        </a>
+                                        <!---->
+                                    </li>
+                                    <div class="v-menu" data-v-6bb45c39="" data-v-05859c07="">
+                                        <div class="v-menu-activator" data-v-6bb45c39=""></div>
+                                    </div>
+                                    <li class="v-list-group" data-v-2419d436="" data-v-05859c07=""><a
+                                            href="/admin/content/erp_sales" class="v-list-item link clickable activator"
+                                            data-v-0c4fd7f4="" data-v-2419d436="">
+                                            <!---->
+                                            <div class="v-list-item-icon" data-v-3a2c81de=""><span class="v-icon"
+                                                    data-v-73a3c90f="" data-v-3a2c81de-s=""
+                                                    style="--v-icon-color:#008C5B;"><i class=""
+                                                        data-v-73a3c90f="">shopping_cart</i></span></div>
+                                            <div class="v-list-item-content" data-v-275e8d1e="">
+                                                <div class="v-text-overflow" data-v-2955c167="" data-v-275e8d1e-s="">Erp
+                                                    Sales</div>
+                                            </div>
+                                            <div class="v-list-item-icon activator-icon" data-v-3a2c81de=""
+                                                data-v-2419d436="" data-v-0c4fd7f4-s=""><span class="v-icon"
+                                                    data-v-73a3c90f="" data-v-2419d436="" data-v-3a2c81de-s=""><i
+                                                        class="" data-v-73a3c90f="">chevron_right</i></span></div>
+                                        </a>
+                                        <!---->
+                                    </li>
+                                    <div class="v-menu" data-v-6bb45c39="" data-v-05859c07="">
+                                        <div class="v-menu-activator" data-v-6bb45c39=""></div>
+                                    </div>
+                                    <li class="v-list-group" data-v-2419d436="" data-v-05859c07=""><a
+                                            href="/admin/content/erp_supply"
+                                            class="v-list-item link clickable activator" data-v-0c4fd7f4=""
+                                            data-v-2419d436="">
+                                            <!---->
+                                            <div class="v-list-item-icon" data-v-3a2c81de=""><span class="v-icon"
+                                                    data-v-73a3c90f="" data-v-3a2c81de-s=""
+                                                    style="--v-icon-color:#6251A8;"><i class=""
+                                                        data-v-73a3c90f="">work_outline</i></span></div>
+                                            <div class="v-list-item-content" data-v-275e8d1e="">
+                                                <div class="v-text-overflow" data-v-2955c167="" data-v-275e8d1e-s="">Erp
+                                                    Supply</div>
+                                            </div>
+                                            <div class="v-list-item-icon activator-icon" data-v-3a2c81de=""
+                                                data-v-2419d436="" data-v-0c4fd7f4-s=""><span class="v-icon"
+                                                    data-v-73a3c90f="" data-v-2419d436="" data-v-3a2c81de-s=""><i
+                                                        class="" data-v-73a3c90f="">chevron_right</i></span></div>
+                                        </a>
+                                        <!---->
+                                    </li>
+                                    <div class="v-menu" data-v-6bb45c39="" data-v-05859c07="">
+                                        <div class="v-menu-activator" data-v-6bb45c39=""></div>
+                                    </div><a href="/admin/content/erp_accounting" class="v-list-item link"
+                                        data-v-0c4fd7f4="" data-v-05859c07="">
+                                        <div class="v-list-item-icon" data-v-3a2c81de=""><span class="v-icon"
+                                                data-v-73a3c90f="" data-v-3a2c81de-s=""
+                                                style="--v-icon-color:#1A66FF;"><i class=""
+                                                    data-v-73a3c90f="">account_balance</i></span></div>
+                                        <div class="v-list-item-content" data-v-275e8d1e="">
+                                            <div class="v-text-overflow" data-v-2955c167="" data-v-275e8d1e-s="">Erp
+                                                Accounting</div>
+                                        </div>
+                                    </a>
+                                    <div class="v-menu" data-v-6bb45c39="" data-v-05859c07="">
+                                        <div class="v-menu-activator" data-v-6bb45c39=""></div>
+                                    </div>
+                                    <li class="v-list-group" data-v-2419d436="" data-v-05859c07=""><a
+                                            href="/admin/content/erp_groups"
+                                            class="v-list-item link clickable activator" data-v-0c4fd7f4=""
+                                            data-v-2419d436="">
+                                            <!---->
+                                            <div class="v-list-item-icon" data-v-3a2c81de=""><span class="v-icon"
+                                                    data-v-73a3c90f="" data-v-3a2c81de-s=""
+                                                    style="--v-icon-color:#EA4DFF;"><i class=""
+                                                        data-v-73a3c90f="">people</i></span></div>
+                                            <div class="v-list-item-content" data-v-275e8d1e="">
+                                                <div class="v-text-overflow" data-v-2955c167="" data-v-275e8d1e-s="">Erp
+                                                    Groups</div>
+                                            </div>
+                                            <div class="v-list-item-icon activator-icon" data-v-3a2c81de=""
+                                                data-v-2419d436="" data-v-0c4fd7f4-s=""><span class="v-icon"
+                                                    data-v-73a3c90f="" data-v-2419d436="" data-v-3a2c81de-s=""><i
+                                                        class="" data-v-73a3c90f="">chevron_right</i></span></div>
+                                        </a>
+                                        <!---->
+                                    </li>
+                                    <div class="v-menu" data-v-6bb45c39="" data-v-05859c07="">
+                                        <div class="v-menu-activator" data-v-6bb45c39=""></div>
+                                    </div>
+                                    <li class="v-list-group" data-v-2419d436="" data-v-05859c07=""><a
+                                            href="/admin/content/erp_team" class="v-list-item link clickable activator"
+                                            data-v-0c4fd7f4="" data-v-2419d436="">
+                                            <!---->
+                                            <div class="v-list-item-icon" data-v-3a2c81de=""><span class="v-icon"
+                                                    data-v-73a3c90f="" data-v-3a2c81de-s=""
+                                                    style="--v-icon-color:#F7971C;"><i class=""
+                                                        data-v-73a3c90f="">accessible</i></span></div>
+                                            <div class="v-list-item-content" data-v-275e8d1e="">
+                                                <div class="v-text-overflow" data-v-2955c167="" data-v-275e8d1e-s="">Erp
+                                                    Team</div>
+                                            </div>
+                                            <div class="v-list-item-icon activator-icon active" data-v-3a2c81de=""
+                                                data-v-2419d436="" data-v-0c4fd7f4-s=""><span class="v-icon"
+                                                    data-v-73a3c90f="" data-v-2419d436="" data-v-3a2c81de-s=""><i
+                                                        class="" data-v-73a3c90f="">chevron_right</i></span></div>
+                                        </a>
+                                        <ul class="items" data-v-2419d436="">
+                                            <li class="v-list-group" data-v-2419d436="" data-v-05859c07=""><a
+                                                    href="/admin/content/src"
+                                                    class="v-list-item link clickable activator" data-v-0c4fd7f4=""
+                                                    data-v-2419d436="">
+                                                    <!---->
+                                                    <div class="v-list-item-icon" data-v-3a2c81de=""><span
+                                                            class="v-icon" data-v-73a3c90f="" data-v-3a2c81de-s=""
+                                                            style="--v-icon-color:#FFAA3A;"><i class=""
+                                                                data-v-73a3c90f="">dvr</i></span></div>
+                                                    <div class="v-list-item-content" data-v-275e8d1e="">
+                                                        <div class="v-text-overflow" data-v-2955c167=""
+                                                            data-v-275e8d1e-s="">Src</div>
+                                                    </div>
+                                                    <div class="v-list-item-icon activator-icon active"
+                                                        data-v-3a2c81de="" data-v-2419d436="" data-v-0c4fd7f4-s=""><span
+                                                            class="v-icon" data-v-73a3c90f="" data-v-2419d436=""
+                                                            data-v-3a2c81de-s=""><i class=""
+                                                                data-v-73a3c90f="">chevron_right</i></span></div>
+                                                </a>
+                                                <ul class="items" data-v-2419d436=""><a href="/admin/content/cms_login"
+                                                        class="v-list-item link" data-v-0c4fd7f4="" data-v-05859c07="">
+                                                        <div class="v-list-item-icon" data-v-3a2c81de=""><span
+                                                                class="v-icon" data-v-73a3c90f="" data-v-3a2c81de-s=""
+                                                                style="--v-icon-color:#FFD358;"><i class=""
+                                                                    data-v-73a3c90f="">assignment_ind</i></span></div>
+                                                        <div class="v-list-item-content" data-v-275e8d1e="">
+                                                            <div class="v-text-overflow" data-v-2955c167=""
+                                                                data-v-275e8d1e-s="">CMS Login</div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="v-menu" data-v-6bb45c39="" data-v-05859c07="">
+                                                        <div class="v-menu-activator" data-v-6bb45c39=""></div>
+                                                    </div><a aria-current="page" href="/admin/content/menus"
+                                                        class="router-link-active router-link-exact-active v-list-item active link"
+                                                        data-v-0c4fd7f4="" data-v-05859c07="">
+                                                        <div class="v-list-item-icon" data-v-3a2c81de=""><span
+                                                                class="v-icon" data-v-73a3c90f="" data-v-3a2c81de-s=""
+                                                                style="--v-icon-color:#FFD358;"><i class=""
+                                                                    data-v-73a3c90f="">menu</i></span></div>
+                                                        <div class="v-list-item-content" data-v-275e8d1e="">
+                                                            <div class="v-text-overflow" data-v-2955c167=""
+                                                                data-v-275e8d1e-s="">Menus</div>
+                                                        </div>
+                                                    </a>
+                                                    <!----><a href="/admin/content/callbacks" class="v-list-item link"
+                                                        data-v-0c4fd7f4="" data-v-05859c07="">
+                                                        <div class="v-list-item-icon" data-v-3a2c81de=""><span
+                                                                class="v-icon" data-v-73a3c90f="" data-v-3a2c81de-s=""
+                                                                style="--v-icon-color:#FFD358;"><i class=""
+                                                                    data-v-73a3c90f="">notifications</i></span></div>
+                                                        <div class="v-list-item-content" data-v-275e8d1e="">
+                                                            <div class="v-text-overflow" data-v-2955c167=""
+                                                                data-v-275e8d1e-s="">Callbacks</div>
+                                                        </div>
+                                                    </a>
+                                                    <!---->
+                                                </ul>
+                                            </li>
+                                            <!---->
+                                        </ul>
+                                    </li>
+                                    <div class="v-menu" data-v-6bb45c39="" data-v-05859c07="">
+                                        <div class="v-menu-activator" data-v-6bb45c39=""></div>
+                                    </div><a href="/admin/content/cms_tools" class="v-list-item link" data-v-0c4fd7f4=""
+                                        data-v-05859c07="">
+                                        <div class="v-list-item-icon" data-v-3a2c81de=""><span class="v-icon"
+                                                data-v-73a3c90f="" data-v-3a2c81de-s=""
+                                                style="--v-icon-color:#656667;"><i class=""
+                                                    data-v-73a3c90f="">design_services</i></span></div>
+                                        <div class="v-list-item-content" data-v-275e8d1e="">
+                                            <div class="v-text-overflow" data-v-2955c167="" data-v-275e8d1e-s="">CMS
+                                                Tools</div>
+                                        </div>
+                                    </a>
+                                    <div class="v-menu" data-v-6bb45c39="" data-v-05859c07="">
+                                        <div class="v-menu-activator" data-v-6bb45c39=""></div>
+                                    </div>
+                                    <li class="v-list-group" data-v-2419d436="" data-v-05859c07=""><a
+                                            href="/admin/content/settings" class="v-list-item link clickable activator"
+                                            data-v-0c4fd7f4="" data-v-2419d436="">
+                                            <!---->
+                                            <div class="v-list-item-icon" data-v-3a2c81de=""><span class="v-icon"
+                                                    data-v-73a3c90f="" data-v-3a2c81de-s=""
+                                                    style="--v-icon-color:#C55169;"><i class=""
+                                                        data-v-73a3c90f="">settings</i></span></div>
+                                            <div class="v-list-item-content" data-v-275e8d1e="">
+                                                <div class="v-text-overflow" data-v-2955c167="" data-v-275e8d1e-s="">
+                                                    Settings</div>
+                                            </div>
+                                            <div class="v-list-item-icon activator-icon" data-v-3a2c81de=""
+                                                data-v-2419d436="" data-v-0c4fd7f4-s=""><span class="v-icon"
+                                                    data-v-73a3c90f="" data-v-2419d436="" data-v-3a2c81de-s=""><i
+                                                        class="" data-v-73a3c90f="">chevron_right</i></span></div>
+                                        </a>
+                                        <!---->
+                                    </li>
+                                    <!----><a href="/admin/content/vc_abbreviations" class="v-list-item link"
+                                        data-v-0c4fd7f4="" data-v-05859c07="">
+                                        <div class="v-list-item-icon" data-v-3a2c81de=""><span class="v-icon"
+                                                data-v-73a3c90f="" data-v-3a2c81de-s=""
+                                                style="--v-icon-color:#2398D7;"><i class=""
+                                                    data-v-73a3c90f="">short_text</i></span></div>
+                                        <div class="v-list-item-content" data-v-275e8d1e="">
+                                            <div class="v-text-overflow" data-v-2955c167="" data-v-275e8d1e-s="">Vc
+                                                Abbreviations</div>
+                                        </div>
+                                    </a>
+                                    <!---->
+                                    <li class="v-list-group" data-v-2419d436="" data-v-05859c07="">
+                                    <li class="v-list-item link clickable activator" data-v-0c4fd7f4=""
+                                        data-v-2419d436="">
+                                        <!---->
+                                        <div class="v-list-item-icon" data-v-3a2c81de=""><span class="v-icon"
+                                                data-v-73a3c90f="" data-v-3a2c81de-s=""
+                                                style="--v-icon-color:#377AB9;"><i class=""
+                                                    data-v-73a3c90f="">folder</i></span></div>
+                                        <div class="v-list-item-content" data-v-275e8d1e="">
+                                            <div class="v-text-overflow" data-v-2955c167="" data-v-275e8d1e-s=""
+                                                data-tooltip="EVTGpEhqv5H_BfImMbOJy">Vehicle Configuration</div>
+                                        </div>
+                                        <div class="v-list-item-icon activator-icon" data-v-3a2c81de=""
+                                            data-v-2419d436="" data-v-0c4fd7f4-s=""><span class="v-icon"
+                                                data-v-73a3c90f="" data-v-2419d436="" data-v-3a2c81de-s=""><i class=""
+                                                    data-v-73a3c90f="">chevron_right</i></span></div>
+                                    </li>
+                                    <!---->
+                                    </li>
+                                    <!----><a href="/admin/content/doc_home" class="v-list-item link" data-v-0c4fd7f4=""
+                                        data-v-05859c07="">
+                                        <div class="v-list-item-icon" data-v-3a2c81de=""><span class="v-icon"
+                                                data-v-73a3c90f="" data-v-3a2c81de-s=""
+                                                style="--v-icon-color:#607D8B;"><i class=""
+                                                    data-v-73a3c90f="">library_books</i></span></div>
+                                        <div class="v-list-item-content" data-v-275e8d1e="">
+                                            <div class="v-text-overflow" data-v-2955c167="" data-v-275e8d1e-s="">Doc
+                                                Home</div>
+                                        </div>
+                                    </a>
+                                    <!----><a href="/admin/content/doc_tables" class="v-list-item link"
+                                        data-v-0c4fd7f4="" data-v-05859c07="">
+                                        <div class="v-list-item-icon" data-v-3a2c81de=""><span class="v-icon"
+                                                data-v-73a3c90f="" data-v-3a2c81de-s=""><i class=""
+                                                    data-v-73a3c90f="">label</i></span></div>
+                                        <div class="v-list-item-content" data-v-275e8d1e="">
+                                            <div class="v-text-overflow" data-v-2955c167="" data-v-275e8d1e-s="">Doc
+                                                Tables</div>
+                                        </div>
+                                    </a>
+                                    <!----><a href="/admin/content/q_db" class="v-list-item link" data-v-0c4fd7f4=""
+                                        data-v-05859c07="">
+                                        <div class="v-list-item-icon" data-v-3a2c81de=""><span class="v-icon"
+                                                data-v-73a3c90f="" data-v-3a2c81de-s=""><i class=""
+                                                    data-v-73a3c90f="">label</i></span></div>
+                                        <div class="v-list-item-content" data-v-275e8d1e="">
+                                            <div class="v-text-overflow" data-v-2955c167="" data-v-275e8d1e-s="">Q DB
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!----><a href="/admin/content/pm_products_erp_items_meli" class="v-list-item link"
+                                        data-v-0c4fd7f4="" data-v-05859c07="">
+                                        <div class="v-list-item-icon" data-v-3a2c81de=""><span class="v-icon"
+                                                data-v-73a3c90f="" data-v-3a2c81de-s=""><i class=""
+                                                    data-v-73a3c90f="">label</i></span></div>
+                                        <div class="v-list-item-content" data-v-275e8d1e="">
+                                            <div class="v-text-overflow" data-v-2955c167="" data-v-275e8d1e-s=""
+                                                data-tooltip="GPFzHGEhgCTNxkgYuo5XG">Pm Products Erp Items Meli</div>
+                                        </div>
+                                    </a>
+                                    <!----><a href="/admin/content/erp_productin" class="v-list-item link"
+                                        data-v-0c4fd7f4="" data-v-05859c07="">
+                                        <div class="v-list-item-icon" data-v-3a2c81de=""><span class="v-icon"
+                                                data-v-73a3c90f="" data-v-3a2c81de-s=""><i class=""
+                                                    data-v-73a3c90f="">label</i></span></div>
+                                        <div class="v-list-item-content" data-v-275e8d1e="">
+                                            <div class="v-text-overflow" data-v-2955c167="" data-v-275e8d1e-s="">Erp
+                                                Productin</div>
+                                        </div>
+                                    </a>
+                                    <!---->
+                                    <div class="v-menu" data-v-6bb45c39="" data-v-970f0324="" data-v-b97aaa68-s="">
+                                        <div class="v-menu-activator" data-v-6bb45c39=""></div>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <div id="main-content" class="content" data-v-30b662e5="">
+                    <header class="header-bar" data-v-c54480fe="" data-v-30b662e5="">
+                        <div class="v-button secondary nav-toggle" data-v-55816638="" data-v-c54480fe=""><button
+                                class="button align-center rounded icon normal" type="button" data-v-55816638=""><span
+                                    class="content" data-v-55816638=""><span class="v-icon" data-v-73a3c90f=""
+                                        data-v-c54480fe=""><i class="" data-v-73a3c90f="">menu</i></span></span>
+                                <div class="spinner" data-v-55816638="">
+                                    <!---->
+                                </div>
+                            </button></div>
+                        <div class="title-outer-prepend" data-v-c54480fe="">
+                            <div class="v-button secondary header-icon" data-v-55816638="" data-v-c7abd8ac=""><button
+                                    class="button align-center rounded icon normal" type="button" disabled=""
+                                    data-v-55816638=""><span class="content" data-v-55816638=""><span class="v-icon"
+                                            data-v-73a3c90f="" data-v-c7abd8ac="" style="--v-icon-color:#FFD358;"><i
+                                                class="" data-v-73a3c90f="">menu</i></span></span>
+                                    <div class="spinner" data-v-55816638="">
+                                        <!---->
+                                    </div>
+                                </button></div>
+                        </div>
+                        <div class="title-container" data-v-c54480fe="">
+                            <div class="headline" data-v-c54480fe=""><span class="v-breadcrumb" data-v-884352f6=""
+                                    data-v-c7abd8ac=""><span class="section" data-v-884352f6="">
+                                        <!----><a href="/admin/content" class="router-link-active section-link"
+                                            data-v-884352f6="">
+                                            <!----> Content
+                                        </a>
+                                    </span></span></div>
+                            <div class="title" data-v-c54480fe="">
+                                <h1 class="type-title" data-v-c54480fe="">Menus</h1>
+                            </div>
+                            <div class="bookmark-controls" data-v-c7abd8ac="">
+                                <div class="v-dialog add" data-v-370b296e="" data-v-c7abd8ac=""><span
+                                        class="v-icon has-click toggle" role="button" tabindex="0" data-v-73a3c90f=""
+                                        data-v-c7abd8ac="" data-v-370b296e-s="" data-tooltip="JrQMUOMJYzCBfauugUoXW"><i
+                                            class="" data-v-73a3c90f="">bookmark_outline</i></span></div>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="spacer" data-v-c54480fe=""></div><span class="item-count" data-v-34941803=""
+                            data-v-c7abd8ac="">1-9 of 9 items</span>
+                        <div class="actions" data-v-352239c0="" data-v-c54480fe="">
+                            <div class="v-button secondary expand" data-v-55816638="" data-v-352239c0=""><button
+                                    class="button align-center rounded icon outlined normal" type="button"
+                                    data-v-55816638=""><span class="content" data-v-55816638=""><span class="v-icon"
+                                            data-v-73a3c90f="" data-v-352239c0=""><i class=""
+                                                data-v-73a3c90f="">arrow_left</i></span></span>
+                                    <div class="spinner" data-v-55816638="">
+                                        <!---->
+                                    </div>
+                                </button></div>
+                            <div class="action-buttons" data-v-352239c0="">
+                                <div class="v-button secondary sidebar-toggle" data-v-55816638="" data-v-352239c0="">
+                                    <button class="button align-center rounded icon outlined normal" type="button"
+                                        data-v-55816638=""><span class="content" data-v-55816638=""><span class="v-icon"
+                                                outline="" data-v-73a3c90f="" data-v-352239c0=""><i class=""
+                                                    data-v-73a3c90f="">info</i></span></span>
+                                        <div class="spinner" data-v-55816638="">
+                                            <!---->
+                                        </div>
+                                    </button></div>
+                                <div class="v-badge search-badge" right="" data-v-5d3df5d4="" data-v-bdf227f4=""
+                                    data-v-c7abd8ac="">
+                                    <!---->
+                                    <div class="search-input" data-v-bdf227f4=""><span
+                                            class="v-icon has-click icon-search" role="button" tabindex="0"
+                                            data-v-73a3c90f="" data-v-bdf227f4=""
+                                            data-tooltip="I6OESZAD3YfDGF9ozAiSX"><i class=""
+                                                data-v-73a3c90f="">search</i></span><input placeholder="Search items..."
+                                            data-v-bdf227f4="">
+                                        <!----><span class="v-icon has-click icon-filter" role="button" tabindex="0"
+                                            data-v-73a3c90f="" data-v-bdf227f4=""
+                                            data-tooltip="nKwjjCOo14UNtT4HVMIvZ"><i class=""
+                                                data-v-73a3c90f="">filter_list</i></span>
+                                        <div class="filter" data-v-bdf227f4="" style="display: none;">
+                                            <div class="system-filter inline empty filter-input" data-v-404ba734=""
+                                                data-v-bdf227f4="">
+                                                <ul class="v-list" data-v-b97aaa68="" data-v-404ba734="">
+                                                    <div class="no-rules" data-v-404ba734="" data-v-b97aaa68-s="">No
+                                                        configured rules</div>
+                                                </ul>
+                                                <div class="buttons" data-v-404ba734="">
+                                                    <div class="v-menu v-select add-filter" groups-clickable="true"
+                                                        data-v-6bb45c39="" data-v-a0800880="" data-v-404ba734="">
+                                                        <div class="v-menu-activator attached" data-v-6bb45c39="">
+                                                            <div class="v-input full-width has-click" data-v-498949c4=""
+                                                                data-v-a0800880="">
+                                                                <!---->
+                                                                <div class="input" data-v-498949c4="">
+                                                                    <div class="prepend" data-v-498949c4=""><span
+                                                                            class="v-icon small" data-v-73a3c90f=""
+                                                                            data-v-404ba734=""><i class=""
+                                                                                data-v-73a3c90f="">add</i></span></div>
+                                                                    <!----><input readonly="" placeholder="Add Filter"
+                                                                        autocomplete="off" type="text" step="1"
+                                                                        data-v-498949c4="">
+                                                                    <!---->
+                                                                    <!---->
+                                                                    <div class="append" data-v-498949c4=""><span
+                                                                            class="v-icon" data-v-73a3c90f=""
+                                                                            data-v-a0800880=""><i class=""
+                                                                                data-v-73a3c90f="">expand_more</i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <!---->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <div class="v-button" data-v-55816638="" data-v-c7abd8ac=""
+                                    data-tooltip="9-XVmcRda7v1vAYS8XHaY"><a href="/admin/content/menus/+"
+                                        class="button align-center rounded icon normal" type="button" disabled="false"
+                                        data-v-55816638=""><span class="content" data-v-55816638=""><span class="v-icon"
+                                                data-v-73a3c90f="" data-v-c7abd8ac=""><i class=""
+                                                    data-v-73a3c90f="">add</i></span></span>
+                                        <div class="spinner" data-v-55816638="">
+                                            <!---->
+                                        </div>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </header>
+                    <main data-v-30b662e5="">
+                        <div class="layout-tabular" data-v-2edb585c="" data-v-c7abd8ac="">
+                            <div class="v-table table" data-v-707ca9dc="" data-v-2edb585c="">
+                                <table summary="Collection, Sort, Icon, Childs, ID, Titulo" data-v-707ca9dc=""
+                                    style="--grid-columns:36px 160px 160px 160px 160px 160px 160px 1fr;">
+                                    <thead class="table-header" data-v-35ccb000="" data-v-707ca9dc="">
+                                        <tr class="fixed" data-v-35ccb000="">
+                                            <!---->
+                                            <th class="select cell" scope="col" data-v-35ccb000=""><button
+                                                    class="v-checkbox" type="button" role="checkbox"
+                                                    aria-pressed="false" data-v-1bdd02de="" data-v-35ccb000="">
+                                                    <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                        data-v-1bdd02de=""><i class=""
+                                                            data-v-73a3c90f="">check_box_outline_blank</i></span><span
+                                                        class="label type-text" data-v-1bdd02de=""></span>
+                                                    <!---->
+                                                </button></th>
+                                            <th class="align-left sortable cell" scope="col" data-v-35ccb000="">
+                                                <div class="content" data-v-35ccb000=""><span
+                                                        data-v-35ccb000="">Collection</span><span
+                                                        class="v-icon small sort-icon" data-v-73a3c90f=""
+                                                        data-v-35ccb000="" data-tooltip="3R0YRP7aNV13_NQTGRfMM"><i
+                                                            class="" data-v-73a3c90f="">sort</i></span></div><span
+                                                    class="resize-handle" data-v-35ccb000=""></span>
+                                            </th>
+                                            <th class="align-left sortable sort-asc cell" scope="col"
+                                                data-v-35ccb000="">
+                                                <div class="content" data-v-35ccb000=""><span
+                                                        data-v-35ccb000="">Sort</span><span
+                                                        class="v-icon small sort-icon" data-v-73a3c90f=""
+                                                        data-v-35ccb000="" data-tooltip="E9BYhlJmsRBms6XJnTBpj"><i
+                                                            class="" data-v-73a3c90f="">sort</i></span></div><span
+                                                    class="resize-handle" data-v-35ccb000=""></span>
+                                            </th>
+                                            <th class="align-left sortable cell" scope="col" data-v-35ccb000="">
+                                                <div class="content" data-v-35ccb000=""><span
+                                                        data-v-35ccb000="">Icon</span><span
+                                                        class="v-icon small sort-icon" data-v-73a3c90f=""
+                                                        data-v-35ccb000="" data-tooltip="03HjbEP73eweynpmjLowH"><i
+                                                            class="" data-v-73a3c90f="">sort</i></span></div><span
+                                                    class="resize-handle" data-v-35ccb000=""></span>
+                                            </th>
+                                            <th class="align-left cell" scope="col" data-v-35ccb000="">
+                                                <div class="content" data-v-35ccb000=""><span
+                                                        data-v-35ccb000="">Childs</span>
+                                                    <!---->
+                                                </div><span class="resize-handle" data-v-35ccb000=""></span>
+                                            </th>
+                                            <th class="align-left sortable cell" scope="col" data-v-35ccb000="">
+                                                <div class="content" data-v-35ccb000=""><span
+                                                        data-v-35ccb000="">ID</span><span class="v-icon small sort-icon"
+                                                        data-v-73a3c90f="" data-v-35ccb000=""
+                                                        data-tooltip="kU7SdVnDqHW0DRC6jAERC"><i class=""
+                                                            data-v-73a3c90f="">sort</i></span></div><span
+                                                    class="resize-handle" data-v-35ccb000=""></span>
+                                            </th>
+                                            <th class="align-left sortable cell" scope="col" data-v-35ccb000="">
+                                                <div class="content" data-v-35ccb000=""><span
+                                                        data-v-35ccb000="">Titulo</span><span
+                                                        class="v-icon small sort-icon" data-v-73a3c90f=""
+                                                        data-v-35ccb000="" data-tooltip="0RrBug-nCeIFE_0fRO29T"><i
+                                                            class="" data-v-73a3c90f="">sort</i></span></div><span
+                                                    class="resize-handle" data-v-35ccb000=""></span>
+                                            </th>
+                                            <th class="spacer cell" scope="col" data-v-35ccb000=""></th>
+                                            <!---->
+                                        </tr>
+                                    </thead>
+                                    <!---->
+                                    <!---->
+                                    <tbody data-v-707ca9dc="">
+                                        <tr class="table-row clickable" data-draggable="true" data-v-2479fb68=""
+                                            data-v-707ca9dc=""
+                                            style="--table-row-height:50px; --table-row-line-height:1;">
+                                            <!---->
+                                            <td class="select cell" data-v-2479fb68=""><button class="v-checkbox"
+                                                    type="button" role="checkbox" aria-pressed="false"
+                                                    data-v-1bdd02de="" data-v-2479fb68="">
+                                                    <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                        data-v-1bdd02de=""><i class=""
+                                                            data-v-73a3c90f="">check_box_outline_blank</i></span><span
+                                                        class="label type-text" data-v-1bdd02de=""></span>
+                                                    <!---->
+                                                </button></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div interface="input" type="string" collection="menus"
+                                                    field="collection" data-v-edd38016="" data-v-2edb585c="">
+                                                    <!----> Dashboards
+                                                </div>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68="">1</td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="v-icon small"
+                                                    interface="select-icon" type="string" collection="menus"
+                                                    field="icon" data-v-73a3c90f="" data-v-edd38016=""
+                                                    data-v-2edb585c=""><i class="filled"
+                                                        data-v-73a3c90f="">settings</i></span></td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="null"
+                                                    data-v-cf005d72="" data-v-edd38016="" data-v-2edb585c="">--</span>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span
+                                                    class="display-formatted-text sans-serif" interface="input"
+                                                    type="integer" collection="menus" field="id" data-v-416d4750=""
+                                                    data-v-edd38016="" data-v-2edb585c="">12</span></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div class="display-labels" defaultbackground="#C1C1C1"
+                                                    interface="input" interface-options="[object Object]"
+                                                    collection="menus" field="titulo" data-v-4d34a4f3=""
+                                                    data-v-edd38016="" data-v-2edb585c=""><span
+                                                        class="v-chip small label disabled" data-v-d55b27c0=""
+                                                        data-v-4d34a4f3=""
+                                                        style="--v-chip-color:var(--foreground-normal); --v-chip-background-color:var(--background-normal);"><span
+                                                            class="chip-content" data-v-d55b27c0="">Tableros
+                                                            <!---->
+                                                        </span></span></div>
+                                            </td>
+                                            <td class="spacer cell" data-v-2479fb68=""></td>
+                                            <!---->
+                                        </tr>
+                                        <tr class="table-row clickable" data-draggable="true" data-v-2479fb68=""
+                                            data-v-707ca9dc=""
+                                            style="--table-row-height:50px; --table-row-line-height:1;">
+                                            <!---->
+                                            <td class="select cell" data-v-2479fb68=""><button class="v-checkbox"
+                                                    type="button" role="checkbox" aria-pressed="false"
+                                                    data-v-1bdd02de="" data-v-2479fb68="">
+                                                    <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                        data-v-1bdd02de=""><i class=""
+                                                            data-v-73a3c90f="">check_box_outline_blank</i></span><span
+                                                        class="label type-text" data-v-1bdd02de=""></span>
+                                                    <!---->
+                                                </button></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div interface="input" type="string" collection="menus"
+                                                    field="collection" data-v-edd38016="" data-v-2edb585c="">
+                                                    <!----> Pm Products
+                                                </div>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68="">2</td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="v-icon small"
+                                                    interface="select-icon" type="string" collection="menus"
+                                                    field="icon" data-v-73a3c90f="" data-v-edd38016=""
+                                                    data-v-2edb585c=""><i class="filled"
+                                                        data-v-73a3c90f="">menu</i></span></td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="null"
+                                                    data-v-cf005d72="" data-v-edd38016="" data-v-2edb585c="">--</span>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span
+                                                    class="display-formatted-text sans-serif" interface="input"
+                                                    type="integer" collection="menus" field="id" data-v-416d4750=""
+                                                    data-v-edd38016="" data-v-2edb585c="">2</span></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div class="display-labels" defaultbackground="#C1C1C1"
+                                                    interface="input" interface-options="[object Object]"
+                                                    collection="menus" field="titulo" data-v-4d34a4f3=""
+                                                    data-v-edd38016="" data-v-2edb585c=""><span
+                                                        class="v-chip small label disabled" data-v-d55b27c0=""
+                                                        data-v-4d34a4f3=""
+                                                        style="--v-chip-color:var(--foreground-normal); --v-chip-background-color:var(--background-normal);"><span
+                                                            class="chip-content" data-v-d55b27c0="">Productos
+                                                            <!---->
+                                                        </span></span></div>
+                                            </td>
+                                            <td class="spacer cell" data-v-2479fb68=""></td>
+                                            <!---->
+                                        </tr>
+                                        <tr class="table-row clickable" data-draggable="true" data-v-2479fb68=""
+                                            data-v-707ca9dc=""
+                                            style="--table-row-height:50px; --table-row-line-height:1;">
+                                            <!---->
+                                            <td class="select cell" data-v-2479fb68=""><button class="v-checkbox"
+                                                    type="button" role="checkbox" aria-pressed="false"
+                                                    data-v-1bdd02de="" data-v-2479fb68="">
+                                                    <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                        data-v-1bdd02de=""><i class=""
+                                                            data-v-73a3c90f="">check_box_outline_blank</i></span><span
+                                                        class="label type-text" data-v-1bdd02de=""></span>
+                                                    <!---->
+                                                </button></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div interface="input" type="string" collection="menus"
+                                                    field="collection" data-v-edd38016="" data-v-2edb585c="">
+                                                    <!----> Erp Sales
+                                                </div>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68="">3</td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="v-icon small"
+                                                    interface="select-icon" type="string" collection="menus"
+                                                    field="icon" data-v-73a3c90f="" data-v-edd38016=""
+                                                    data-v-2edb585c=""><i class="filled"
+                                                        data-v-73a3c90f="">point_of_sale</i></span></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div class="v-menu" interface="list" interface-options="[object Object]"
+                                                    type="json" collection="menus" field="childs" data-v-6bb45c39=""
+                                                    data-v-edd38016="" data-v-2edb585c="">
+                                                    <div class="v-menu-activator" data-v-6bb45c39=""><span
+                                                            class="toggle"><span class="label">2 Items</span></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span
+                                                    class="display-formatted-text sans-serif" interface="input"
+                                                    type="integer" collection="menus" field="id" data-v-416d4750=""
+                                                    data-v-edd38016="" data-v-2edb585c="">1</span></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div class="display-labels" defaultbackground="#C1C1C1"
+                                                    interface="input" interface-options="[object Object]"
+                                                    collection="menus" field="titulo" data-v-4d34a4f3=""
+                                                    data-v-edd38016="" data-v-2edb585c=""><span
+                                                        class="v-chip small label disabled" data-v-d55b27c0=""
+                                                        data-v-4d34a4f3=""
+                                                        style="--v-chip-color:var(--foreground-normal); --v-chip-background-color:var(--background-normal);"><span
+                                                            class="chip-content" data-v-d55b27c0="">Ventas
+                                                            <!---->
+                                                        </span></span></div>
+                                            </td>
+                                            <td class="spacer cell" data-v-2479fb68=""></td>
+                                            <!---->
+                                        </tr>
+                                        <tr class="table-row clickable" data-draggable="true" data-v-2479fb68=""
+                                            data-v-707ca9dc=""
+                                            style="--table-row-height:50px; --table-row-line-height:1;">
+                                            <!---->
+                                            <td class="select cell" data-v-2479fb68=""><button class="v-checkbox"
+                                                    type="button" role="checkbox" aria-pressed="false"
+                                                    data-v-1bdd02de="" data-v-2479fb68="">
+                                                    <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                        data-v-1bdd02de=""><i class=""
+                                                            data-v-73a3c90f="">check_box_outline_blank</i></span><span
+                                                        class="label type-text" data-v-1bdd02de=""></span>
+                                                    <!---->
+                                                </button></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div interface="input" type="string" collection="menus"
+                                                    field="collection" data-v-edd38016="" data-v-2edb585c="">
+                                                    <!----> Erp Supply
+                                                </div>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68="">4</td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="v-icon small"
+                                                    interface="select-icon" type="string" collection="menus"
+                                                    field="icon" data-v-73a3c90f="" data-v-edd38016=""
+                                                    data-v-2edb585c=""><i class="filled"
+                                                        data-v-73a3c90f="">directions_off</i></span></td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="null"
+                                                    data-v-cf005d72="" data-v-edd38016="" data-v-2edb585c="">--</span>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span
+                                                    class="display-formatted-text sans-serif" interface="input"
+                                                    type="integer" collection="menus" field="id" data-v-416d4750=""
+                                                    data-v-edd38016="" data-v-2edb585c="">3</span></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div class="display-labels" defaultbackground="#C1C1C1"
+                                                    interface="input" interface-options="[object Object]"
+                                                    collection="menus" field="titulo" data-v-4d34a4f3=""
+                                                    data-v-edd38016="" data-v-2edb585c=""><span
+                                                        class="v-chip small label disabled" data-v-d55b27c0=""
+                                                        data-v-4d34a4f3=""
+                                                        style="--v-chip-color:var(--foreground-normal); --v-chip-background-color:var(--background-normal);"><span
+                                                            class="chip-content" data-v-d55b27c0="">Compras
+                                                            <!---->
+                                                        </span></span></div>
+                                            </td>
+                                            <td class="spacer cell" data-v-2479fb68=""></td>
+                                            <!---->
+                                        </tr>
+                                        <tr class="table-row clickable" data-draggable="true" data-v-2479fb68=""
+                                            data-v-707ca9dc=""
+                                            style="--table-row-height:50px; --table-row-line-height:1;">
+                                            <!---->
+                                            <td class="select cell" data-v-2479fb68=""><button class="v-checkbox"
+                                                    type="button" role="checkbox" aria-pressed="false"
+                                                    data-v-1bdd02de="" data-v-2479fb68="">
+                                                    <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                        data-v-1bdd02de=""><i class=""
+                                                            data-v-73a3c90f="">check_box_outline_blank</i></span><span
+                                                        class="label type-text" data-v-1bdd02de=""></span>
+                                                    <!---->
+                                                </button></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div interface="input" type="string" collection="menus"
+                                                    field="collection" data-v-edd38016="" data-v-2edb585c="">
+                                                    <!----> Erp Accounting
+                                                </div>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68="">5</td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="v-icon small"
+                                                    interface="select-icon" type="string" collection="menus"
+                                                    field="icon" data-v-73a3c90f="" data-v-edd38016=""
+                                                    data-v-2edb585c=""><i class="filled"
+                                                        data-v-73a3c90f="">account_balance</i></span></td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="null"
+                                                    data-v-cf005d72="" data-v-edd38016="" data-v-2edb585c="">--</span>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span
+                                                    class="display-formatted-text sans-serif" interface="input"
+                                                    type="integer" collection="menus" field="id" data-v-416d4750=""
+                                                    data-v-edd38016="" data-v-2edb585c="">4</span></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div class="display-labels" defaultbackground="#C1C1C1"
+                                                    interface="input" interface-options="[object Object]"
+                                                    collection="menus" field="titulo" data-v-4d34a4f3=""
+                                                    data-v-edd38016="" data-v-2edb585c=""><span
+                                                        class="v-chip small label disabled" data-v-d55b27c0=""
+                                                        data-v-4d34a4f3=""
+                                                        style="--v-chip-color:var(--foreground-normal); --v-chip-background-color:var(--background-normal);"><span
+                                                            class="chip-content" data-v-d55b27c0="">Cuentas
+                                                            <!---->
+                                                        </span></span></div>
+                                            </td>
+                                            <td class="spacer cell" data-v-2479fb68=""></td>
+                                            <!---->
+                                        </tr>
+                                        <tr class="table-row clickable" data-draggable="true" data-v-2479fb68=""
+                                            data-v-707ca9dc=""
+                                            style="--table-row-height:50px; --table-row-line-height:1;">
+                                            <!---->
+                                            <td class="select cell" data-v-2479fb68=""><button class="v-checkbox"
+                                                    type="button" role="checkbox" aria-pressed="false"
+                                                    data-v-1bdd02de="" data-v-2479fb68="">
+                                                    <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                        data-v-1bdd02de=""><i class=""
+                                                            data-v-73a3c90f="">check_box_outline_blank</i></span><span
+                                                        class="label type-text" data-v-1bdd02de=""></span>
+                                                    <!---->
+                                                </button></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div interface="input" type="string" collection="menus"
+                                                    field="collection" data-v-edd38016="" data-v-2edb585c="">
+                                                    <!----> Erp Groups
+                                                </div>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68="">6</td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="v-icon small"
+                                                    interface="select-icon" type="string" collection="menus"
+                                                    field="icon" data-v-73a3c90f="" data-v-edd38016=""
+                                                    data-v-2edb585c=""><i class="filled"
+                                                        data-v-73a3c90f="">people</i></span></td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="null"
+                                                    data-v-cf005d72="" data-v-edd38016="" data-v-2edb585c="">--</span>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span
+                                                    class="display-formatted-text sans-serif" interface="input"
+                                                    type="integer" collection="menus" field="id" data-v-416d4750=""
+                                                    data-v-edd38016="" data-v-2edb585c="">5</span></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div class="display-labels" defaultbackground="#C1C1C1"
+                                                    interface="input" interface-options="[object Object]"
+                                                    collection="menus" field="titulo" data-v-4d34a4f3=""
+                                                    data-v-edd38016="" data-v-2edb585c=""><span
+                                                        class="v-chip small label disabled" data-v-d55b27c0=""
+                                                        data-v-4d34a4f3=""
+                                                        style="--v-chip-color:var(--foreground-normal); --v-chip-background-color:var(--background-normal);"><span
+                                                            class="chip-content" data-v-d55b27c0="">Grupos
+                                                            <!---->
+                                                        </span></span></div>
+                                            </td>
+                                            <td class="spacer cell" data-v-2479fb68=""></td>
+                                            <!---->
+                                        </tr>
+                                        <tr class="table-row clickable" data-draggable="true" data-v-2479fb68=""
+                                            data-v-707ca9dc=""
+                                            style="--table-row-height:50px; --table-row-line-height:1;">
+                                            <!---->
+                                            <td class="select cell" data-v-2479fb68=""><button class="v-checkbox"
+                                                    type="button" role="checkbox" aria-pressed="false"
+                                                    data-v-1bdd02de="" data-v-2479fb68="">
+                                                    <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                        data-v-1bdd02de=""><i class=""
+                                                            data-v-73a3c90f="">check_box_outline_blank</i></span><span
+                                                        class="label type-text" data-v-1bdd02de=""></span>
+                                                    <!---->
+                                                </button></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div interface="input" type="string" collection="menus"
+                                                    field="collection" data-v-edd38016="" data-v-2edb585c="">
+                                                    <!----> Erp Team
+                                                </div>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68="">7</td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="v-icon small"
+                                                    interface="select-icon" type="string" collection="menus"
+                                                    field="icon" data-v-73a3c90f="" data-v-edd38016=""
+                                                    data-v-2edb585c=""><i class="filled"
+                                                        data-v-73a3c90f="">accessible</i></span></td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="null"
+                                                    data-v-cf005d72="" data-v-edd38016="" data-v-2edb585c="">--</span>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span
+                                                    class="display-formatted-text sans-serif" interface="input"
+                                                    type="integer" collection="menus" field="id" data-v-416d4750=""
+                                                    data-v-edd38016="" data-v-2edb585c="">13</span></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div class="display-labels" defaultbackground="#C1C1C1"
+                                                    interface="input" interface-options="[object Object]"
+                                                    collection="menus" field="titulo" data-v-4d34a4f3=""
+                                                    data-v-edd38016="" data-v-2edb585c=""><span
+                                                        class="v-chip small label disabled" data-v-d55b27c0=""
+                                                        data-v-4d34a4f3=""
+                                                        style="--v-chip-color:var(--foreground-normal); --v-chip-background-color:var(--background-normal);"><span
+                                                            class="chip-content" data-v-d55b27c0="">Equipo
+                                                            <!---->
+                                                        </span></span></div>
+                                            </td>
+                                            <td class="spacer cell" data-v-2479fb68=""></td>
+                                            <!---->
+                                        </tr>
+                                        <tr class="table-row clickable" data-draggable="true" data-v-2479fb68=""
+                                            data-v-707ca9dc=""
+                                            style="--table-row-height:50px; --table-row-line-height:1;">
+                                            <!---->
+                                            <td class="select cell" data-v-2479fb68=""><button class="v-checkbox"
+                                                    type="button" role="checkbox" aria-pressed="false"
+                                                    data-v-1bdd02de="" data-v-2479fb68="">
+                                                    <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                        data-v-1bdd02de=""><i class=""
+                                                            data-v-73a3c90f="">check_box_outline_blank</i></span><span
+                                                        class="label type-text" data-v-1bdd02de=""></span>
+                                                    <!---->
+                                                </button></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div interface="input" type="string" collection="menus"
+                                                    field="collection" data-v-edd38016="" data-v-2edb585c="">
+                                                    <!----> CMS Tools
+                                                </div>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68="">8</td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="v-icon small"
+                                                    interface="select-icon" type="string" collection="menus"
+                                                    field="icon" data-v-73a3c90f="" data-v-edd38016=""
+                                                    data-v-2edb585c=""><i class="filled"
+                                                        data-v-73a3c90f="">construction</i></span></td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="null"
+                                                    data-v-cf005d72="" data-v-edd38016="" data-v-2edb585c="">--</span>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span
+                                                    class="display-formatted-text sans-serif" interface="input"
+                                                    type="integer" collection="menus" field="id" data-v-416d4750=""
+                                                    data-v-edd38016="" data-v-2edb585c="">6</span></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div class="display-labels" defaultbackground="#C1C1C1"
+                                                    interface="input" interface-options="[object Object]"
+                                                    collection="menus" field="titulo" data-v-4d34a4f3=""
+                                                    data-v-edd38016="" data-v-2edb585c=""><span
+                                                        class="v-chip small label disabled" data-v-d55b27c0=""
+                                                        data-v-4d34a4f3=""
+                                                        style="--v-chip-color:var(--foreground-normal); --v-chip-background-color:var(--background-normal);"><span
+                                                            class="chip-content" data-v-d55b27c0="">Herramientas
+                                                            <!---->
+                                                        </span></span></div>
+                                            </td>
+                                            <td class="spacer cell" data-v-2479fb68=""></td>
+                                            <!---->
+                                        </tr>
+                                        <tr class="table-row clickable" data-draggable="true" data-v-2479fb68=""
+                                            data-v-707ca9dc=""
+                                            style="--table-row-height:50px; --table-row-line-height:1;">
+                                            <!---->
+                                            <td class="select cell" data-v-2479fb68=""><button class="v-checkbox"
+                                                    type="button" role="checkbox" aria-pressed="false"
+                                                    data-v-1bdd02de="" data-v-2479fb68="">
+                                                    <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                        data-v-1bdd02de=""><i class=""
+                                                            data-v-73a3c90f="">check_box_outline_blank</i></span><span
+                                                        class="label type-text" data-v-1bdd02de=""></span>
+                                                    <!---->
+                                                </button></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div interface="input" type="string" collection="menus"
+                                                    field="collection" data-v-edd38016="" data-v-2edb585c="">
+                                                    <!----> Settings
+                                                </div>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68="">9</td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="v-icon small"
+                                                    interface="select-icon" type="string" collection="menus"
+                                                    field="icon" data-v-73a3c90f="" data-v-edd38016=""
+                                                    data-v-2edb585c=""><i class="filled"
+                                                        data-v-73a3c90f="">settings</i></span></td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span class="null"
+                                                    data-v-cf005d72="" data-v-edd38016="" data-v-2edb585c="">--</span>
+                                            </td>
+                                            <td class="cell align-left" data-v-2479fb68=""><span
+                                                    class="display-formatted-text sans-serif" interface="input"
+                                                    type="integer" collection="menus" field="id" data-v-416d4750=""
+                                                    data-v-edd38016="" data-v-2edb585c="">7</span></td>
+                                            <td class="cell align-left" data-v-2479fb68="">
+                                                <div class="display-labels" defaultbackground="#C1C1C1"
+                                                    interface="input" interface-options="[object Object]"
+                                                    collection="menus" field="titulo" data-v-4d34a4f3=""
+                                                    data-v-edd38016="" data-v-2edb585c=""><span
+                                                        class="v-chip small label disabled" data-v-d55b27c0=""
+                                                        data-v-4d34a4f3=""
+                                                        style="--v-chip-color:var(--foreground-normal); --v-chip-background-color:var(--background-normal);"><span
+                                                            class="chip-content" data-v-d55b27c0="">Ajustes
+                                                            <!---->
+                                                        </span></span></div>
+                                            </td>
+                                            <td class="spacer cell" data-v-2479fb68=""></td>
+                                            <!---->
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="footer" data-v-2edb585c="">
+                                    <div class="pagination" data-v-2edb585c="">
+                                        <!---->
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="v-dialog" data-v-370b296e="" data-v-4ea29c7f="" data-v-5d0693b1=""
+                            data-v-c7abd8ac=""></div>
+                        <div class="v-dialog" data-v-370b296e="" data-v-c7abd8ac=""></div>
+                    </main>
+                </div>
+                <aside id="sidebar" role="contentinfo" class="alt-colors" aria-label="Module Sidebar"
+                    data-v-30b662e5="">
+                    <div class="flex-container" data-v-30b662e5="">
+                        <div class="v-item-group sidebar-detail-group" data-v-ebb6371e="" data-v-30b662e5="">
+                            <div class="sidebar-detail" data-v-45689e02="" data-v-c7abd8ac=""><button class="toggle"
+                                    data-v-45689e02="">
+                                    <div class="icon" data-v-45689e02="">
+                                        <div class="v-badge bordered" data-v-5d3df5d4="" data-v-45689e02="">
+                                            <!----><span class="v-icon" outline="" data-v-73a3c90f=""
+                                                data-v-45689e02=""><i class=""
+                                                    data-v-73a3c90f="">info_outline</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="title" data-v-45689e02="" style="display: none;">Information</div>
+                                    <!---->
+                                </button>
+                                <div class="close" data-v-45689e02="" style="display: none;"><span class="v-icon"
+                                        data-v-73a3c90f="" data-v-45689e02=""><i class=""
+                                            data-v-73a3c90f="">close</i></span></div>
+                                <div class="scroll-container" data-v-45689e02="" style="display: none;">
+                                    <div class="content" data-v-45689e02="">
+                                        <div class="page-description" data-v-c7abd8ac="">
+                                            <p><strong>Browse Items</strong> — Lists all Menus items you have access to.
+                                                Customize layout, filters, and sorting to tailor your view, and even
+                                                save bookmarks of these different configurations for quick access.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-detail" data-v-45689e02="" data-v-1ebcb13a="" data-v-c7abd8ac=""><button
+                                    class="toggle" data-v-45689e02="">
+                                    <div class="icon" data-v-45689e02="">
+                                        <div class="v-badge bordered" data-v-5d3df5d4="" data-v-45689e02="">
+                                            <!----><span class="v-icon" outline="" data-v-73a3c90f=""
+                                                data-v-45689e02=""><i class="" data-v-73a3c90f="">layers</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="title" data-v-45689e02="" style="display: none;">Layout Options</div>
+                                    <div class="icon" data-v-45689e02=""><span class="v-icon expand-icon" outline=""
+                                            data-v-73a3c90f="" data-v-45689e02=""><i class=""
+                                                data-v-73a3c90f="">expand_more</i></span></div>
+                                </button>
+                                <!---->
+                                <div class="scroll-container" data-v-45689e02="" style="display: none;">
+                                    <div class="content" data-v-45689e02="">
+                                        <div class="layout-options" data-v-1ebcb13a="">
+                                            <div class="field" data-v-1ebcb13a="">
+                                                <div class="type-label" data-v-1ebcb13a="">Layout</div>
+                                                <div class="v-menu v-select" data-v-6bb45c39="" data-v-a0800880=""
+                                                    data-v-1ebcb13a="">
+                                                    <div class="v-menu-activator attached" data-v-6bb45c39="">
+                                                        <div class="v-input full-width has-click" data-v-498949c4=""
+                                                            data-v-a0800880="">
+                                                            <!---->
+                                                            <div class="input" data-v-498949c4="">
+                                                                <div class="prepend" data-v-498949c4=""><span
+                                                                        class="v-icon" data-v-73a3c90f=""
+                                                                        data-v-1ebcb13a=""><i class=""
+                                                                            data-v-73a3c90f="">reorder</i></span></div>
+                                                                <!----><input readonly="" autocomplete="off" type="text"
+                                                                    step="1" data-v-498949c4="">
+                                                                <!---->
+                                                                <!---->
+                                                                <div class="append" data-v-498949c4=""><span
+                                                                        class="v-icon" data-v-73a3c90f=""
+                                                                        data-v-a0800880=""><i class=""
+                                                                            data-v-73a3c90f="">expand_more</i></span>
+                                                                </div>
+                                                            </div>
+                                                            <!---->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="field" data-v-4a9cb74e="">
+                                                <div class="type-label" data-v-4a9cb74e="">Spacing</div>
+                                                <div class="v-menu v-select" data-v-6bb45c39="" data-v-a0800880=""
+                                                    data-v-4a9cb74e="">
+                                                    <div class="v-menu-activator attached" data-v-6bb45c39="">
+                                                        <div class="v-input full-width has-click" data-v-498949c4=""
+                                                            data-v-a0800880="">
+                                                            <!---->
+                                                            <div class="input" data-v-498949c4="">
+                                                                <!---->
+                                                                <!----><input readonly="" autocomplete="off" type="text"
+                                                                    step="1" data-v-498949c4="">
+                                                                <!---->
+                                                                <!---->
+                                                                <div class="append" data-v-498949c4=""><span
+                                                                        class="v-icon" data-v-73a3c90f=""
+                                                                        data-v-a0800880=""><i class=""
+                                                                            data-v-73a3c90f="">expand_more</i></span>
+                                                                </div>
+                                                            </div>
+                                                            <!---->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="field" data-v-4a9cb74e="">
+                                                <div class="type-label" data-v-4a9cb74e="">Fields</div>
+                                                <div data-v-4a9cb74e=""><button class="v-checkbox checked" type="button"
+                                                        role="checkbox" aria-pressed="true" data-draggable="true"
+                                                        data-v-1bdd02de="" data-v-4a9cb74e="">
+                                                        <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                            data-v-1bdd02de=""><i class=""
+                                                                data-v-73a3c90f="">check_box</i></span><span
+                                                            class="label type-text" data-v-1bdd02de="">Collection</span>
+                                                        <div class="append" data-v-1bdd02de="">
+                                                            <div class="spacer" data-v-4a9cb74e=""></div><span
+                                                                class="v-icon drag-handle" data-v-73a3c90f=""
+                                                                data-v-4a9cb74e=""><i class=""
+                                                                    data-v-73a3c90f="">drag_handle</i></span>
+                                                        </div>
+                                                    </button><button class="v-checkbox checked" type="button"
+                                                        role="checkbox" aria-pressed="true" data-draggable="true"
+                                                        data-v-1bdd02de="" data-v-4a9cb74e="">
+                                                        <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                            data-v-1bdd02de=""><i class=""
+                                                                data-v-73a3c90f="">check_box</i></span><span
+                                                            class="label type-text" data-v-1bdd02de="">Sort</span>
+                                                        <div class="append" data-v-1bdd02de="">
+                                                            <div class="spacer" data-v-4a9cb74e=""></div><span
+                                                                class="v-icon drag-handle" data-v-73a3c90f=""
+                                                                data-v-4a9cb74e=""><i class=""
+                                                                    data-v-73a3c90f="">drag_handle</i></span>
+                                                        </div>
+                                                    </button><button class="v-checkbox checked" type="button"
+                                                        role="checkbox" aria-pressed="true" data-draggable="true"
+                                                        data-v-1bdd02de="" data-v-4a9cb74e="">
+                                                        <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                            data-v-1bdd02de=""><i class=""
+                                                                data-v-73a3c90f="">check_box</i></span><span
+                                                            class="label type-text" data-v-1bdd02de="">Icon</span>
+                                                        <div class="append" data-v-1bdd02de="">
+                                                            <div class="spacer" data-v-4a9cb74e=""></div><span
+                                                                class="v-icon drag-handle" data-v-73a3c90f=""
+                                                                data-v-4a9cb74e=""><i class=""
+                                                                    data-v-73a3c90f="">drag_handle</i></span>
+                                                        </div>
+                                                    </button><button class="v-checkbox checked" type="button"
+                                                        role="checkbox" aria-pressed="true" data-draggable="true"
+                                                        data-v-1bdd02de="" data-v-4a9cb74e="">
+                                                        <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                            data-v-1bdd02de=""><i class=""
+                                                                data-v-73a3c90f="">check_box</i></span><span
+                                                            class="label type-text" data-v-1bdd02de="">Childs</span>
+                                                        <div class="append" data-v-1bdd02de="">
+                                                            <div class="spacer" data-v-4a9cb74e=""></div><span
+                                                                class="v-icon drag-handle" data-v-73a3c90f=""
+                                                                data-v-4a9cb74e=""><i class=""
+                                                                    data-v-73a3c90f="">drag_handle</i></span>
+                                                        </div>
+                                                    </button><button class="v-checkbox checked" type="button"
+                                                        role="checkbox" aria-pressed="true" data-draggable="true"
+                                                        data-v-1bdd02de="" data-v-4a9cb74e="">
+                                                        <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                            data-v-1bdd02de=""><i class=""
+                                                                data-v-73a3c90f="">check_box</i></span><span
+                                                            class="label type-text" data-v-1bdd02de="">ID</span>
+                                                        <div class="append" data-v-1bdd02de="">
+                                                            <div class="spacer" data-v-4a9cb74e=""></div><span
+                                                                class="v-icon drag-handle" data-v-73a3c90f=""
+                                                                data-v-4a9cb74e=""><i class=""
+                                                                    data-v-73a3c90f="">drag_handle</i></span>
+                                                        </div>
+                                                    </button><button class="v-checkbox checked" type="button"
+                                                        role="checkbox" aria-pressed="true" data-draggable="true"
+                                                        data-v-1bdd02de="" data-v-4a9cb74e="">
+                                                        <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                            data-v-1bdd02de=""><i class=""
+                                                                data-v-73a3c90f="">check_box</i></span><span
+                                                            class="label type-text" data-v-1bdd02de="">Titulo</span>
+                                                        <div class="append" data-v-1bdd02de="">
+                                                            <div class="spacer" data-v-4a9cb74e=""></div><span
+                                                                class="v-icon drag-handle" data-v-73a3c90f=""
+                                                                data-v-4a9cb74e=""><i class=""
+                                                                    data-v-73a3c90f="">drag_handle</i></span>
+                                                        </div>
+                                                    </button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!---->
+                            <div class="sidebar-detail" data-v-45689e02="" data-v-3c22b9bc="" data-v-c7abd8ac=""><button
+                                    class="toggle" data-v-45689e02="">
+                                    <div class="icon" data-v-45689e02="">
+                                        <div class="v-badge bordered" data-v-5d3df5d4="" data-v-45689e02="">
+                                            <!----><span class="v-icon" outline="" data-v-73a3c90f=""
+                                                data-v-45689e02=""><i class=""
+                                                    data-v-73a3c90f="">sync_disabled</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="title" data-v-45689e02="" style="display: none;">Auto Refresh</div>
+                                    <div class="icon" data-v-45689e02=""><span class="v-icon expand-icon" outline=""
+                                            data-v-73a3c90f="" data-v-45689e02=""><i class=""
+                                                data-v-73a3c90f="">expand_more</i></span></div>
+                                </button>
+                                <!---->
+                                <div class="scroll-container" data-v-45689e02="" style="display: none;">
+                                    <div class="content" data-v-45689e02="">
+                                        <div class="fields" data-v-3c22b9bc="">
+                                            <div class="field full" data-v-3c22b9bc="">
+                                                <p class="type-label" data-v-3c22b9bc="">Refresh Interval</p>
+                                                <div class="v-menu v-select" data-v-6bb45c39="" data-v-a0800880=""
+                                                    data-v-3c22b9bc="">
+                                                    <div class="v-menu-activator attached" data-v-6bb45c39="">
+                                                        <div class="v-input full-width has-click" data-v-498949c4=""
+                                                            data-v-a0800880="">
+                                                            <!---->
+                                                            <div class="input" data-v-498949c4="">
+                                                                <!---->
+                                                                <!----><input readonly="" autocomplete="off" type="text"
+                                                                    step="1" data-v-498949c4="">
+                                                                <!---->
+                                                                <!---->
+                                                                <div class="append" data-v-498949c4=""><span
+                                                                        class="v-icon" data-v-73a3c90f=""
+                                                                        data-v-a0800880=""><i class=""
+                                                                            data-v-73a3c90f="">expand_more</i></span>
+                                                                </div>
+                                                            </div>
+                                                            <!---->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-detail" data-v-45689e02="" data-v-11c53db4="" data-v-c7abd8ac=""><button
+                                    class="toggle" data-v-45689e02="">
+                                    <div class="icon" data-v-45689e02="">
+                                        <div class="v-badge bordered" data-v-5d3df5d4="" data-v-45689e02="">
+                                            <!----><span class="v-icon" outline="" data-v-73a3c90f=""
+                                                data-v-45689e02=""><i class="" data-v-73a3c90f="">save_alt</i></span>
+                                        </div>
+                                    </div>
+                                    <div class="title" data-v-45689e02="" style="display: none;">Export Data</div>
+                                    <div class="icon" data-v-45689e02=""><span class="v-icon expand-icon" outline=""
+                                            data-v-73a3c90f="" data-v-45689e02=""><i class=""
+                                                data-v-73a3c90f="">expand_more</i></span></div>
+                                </button>
+                                <!---->
+                                <div class="scroll-container" data-v-45689e02="" style="display: none;">
+                                    <div class="content" data-v-45689e02="">
+                                        <div class="fields" data-v-11c53db4="">
+                                            <div class="field full" data-v-11c53db4="">
+                                                <p class="type-label" data-v-11c53db4="">Format</p>
+                                                <div class="v-menu v-select" data-v-6bb45c39="" data-v-a0800880=""
+                                                    data-v-11c53db4="">
+                                                    <div class="v-menu-activator attached" data-v-6bb45c39="">
+                                                        <div class="v-input full-width has-click" data-v-498949c4=""
+                                                            data-v-a0800880="">
+                                                            <!---->
+                                                            <div class="input" data-v-498949c4="">
+                                                                <!---->
+                                                                <!----><input readonly="" autocomplete="off" type="text"
+                                                                    step="1" data-v-498949c4="">
+                                                                <!---->
+                                                                <!---->
+                                                                <div class="append" data-v-498949c4=""><span
+                                                                        class="v-icon" data-v-73a3c90f=""
+                                                                        data-v-a0800880=""><i class=""
+                                                                            data-v-73a3c90f="">expand_more</i></span>
+                                                                </div>
+                                                            </div>
+                                                            <!---->
+                                                        </div>
+                                                    </div>
+                                                </div><button class="v-checkbox checked" type="button" role="checkbox"
+                                                    aria-pressed="true" data-v-1bdd02de="" data-v-11c53db4="">
+                                                    <!----><span class="v-icon checkbox" data-v-73a3c90f=""
+                                                        data-v-1bdd02de=""><i class=""
+                                                            data-v-73a3c90f="">check_box</i></span><span
+                                                        class="label type-text" data-v-1bdd02de="">Use Current Filters
+                                                        &amp; Settings</span>
+                                                    <!---->
+                                                </button>
+                                            </div>
+                                            <div class="field full" data-v-11c53db4="">
+                                                <div class="v-button full-width" data-v-55816638="" data-v-11c53db4="">
+                                                    <button class="button align-center full-width normal" type="button"
+                                                        data-v-55816638=""><span class="content"
+                                                            data-v-55816638="">Export Menus</span>
+                                                        <div class="spinner" data-v-55816638="">
+                                                            <!---->
+                                                        </div>
+                                                    </button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spacer" data-v-30b662e5=""></div>
+                        <div class="notifications-preview" data-v-7a71c8d9="" data-v-30b662e5="">
+                            <!----><button class="sidebar-button toggle" data-v-3f4d4d50="" data-v-7a71c8d9=""
+                                data-tooltip="7oLSNKmRxaJTF-FahQAcE">
+                                <div class="icon" data-v-3f4d4d50=""><span class="v-icon" outline="" data-v-73a3c90f=""
+                                        data-v-3f4d4d50=""><i class="" data-v-73a3c90f="">pending_actions</i></span>
+                                </div>
+                                <!---->
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+                <div class="v-overlay has-click nav-overlay" data-v-3e74acbb="" data-v-30b662e5="">
+                    <div class="overlay" data-v-3e74acbb=""></div>
+                    <!---->
+                </div>
+                <div class="v-overlay has-click sidebar-overlay" data-v-3e74acbb="" data-v-30b662e5="">
+                    <div class="overlay" data-v-3e74acbb=""></div>
+                    <!---->
+                </div>
+                <div class="v-dialog" data-v-370b296e="" data-v-4ea29c7f="" data-v-35078cbe="" data-v-30b662e5=""></div>
+                <div class="notifications-group" data-v-31bc6bbb="" data-v-30b662e5=""></div>
+                <div class="notification-dialogs" data-v-bb61b36a="" data-v-30b662e5=""></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dialog-outlet"><span data-v-370b296e=""></span><span data-v-370b296e=""></span><span
+            data-v-370b296e=""></span><span data-v-370b296e=""></span><span data-v-370b296e=""></span></div>
+    <div id="menu-outlet">
+        <div data-v-6bb45c39=""></div>
+        <div data-v-6bb45c39=""></div>
+        <div data-v-6bb45c39=""></div>
+        <div data-v-6bb45c39=""></div>
+        <div data-v-6bb45c39=""></div>
+        <div data-v-6bb45c39=""></div>
+        <div data-v-6bb45c39=""></div>
+        <div data-v-6bb45c39=""></div>
+        <div data-v-6bb45c39=""></div>
+        <div data-v-6bb45c39=""></div>
+        <div data-v-6bb45c39=""></div>
+        <div data-v-6bb45c39=""></div>
+        <div data-v-6bb45c39=""></div>
+        <div data-v-6bb45c39=""></div>
+        <div data-v-6bb45c39=""></div>
+    </div>
+
+
+
+
+    <svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev"
+        style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;">
+        <defs id="SvgjsDefs1002"></defs>
+        <polyline id="SvgjsPolyline1003" points="0,0"></polyline>
+        <path id="SvgjsPath1004" d="M0 0 "></path>
+    </svg>
+    <div id="tooltip" class="top" style="transform: translate(calc(562px - 50%), calc(114px - 100%));">Sort Ascending
+    </div>
+</body>
+
+</html>

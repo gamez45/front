@@ -22,7 +22,7 @@
 
                                 <li class="nav-item">
                                     <a class="nav-link" href="/<%= menu.collection %>/<%= userName %>">
-                                        <%= menu.titulo %>
+                                        <span class="material-icons"><%= menu.icon %></span>  <%= menu.titulo %>
                                     </a>
                                 </li>
                                 <%} else {%>
@@ -31,7 +31,7 @@
                                     <li class="nav-item dropdown row mb-3">
 
                                         <a class="nav-link col-6 themed-grid-col" href="/<%= menu.collection %>/<%= userName %>">
-                                            <%= menu.titulo %>
+                                            <span class="material-icons"><%= menu.icon %></span> <%= menu.titulo %>
                                         </a>
 
                                         <button class="navbar-toggler p-0 border-0 col-6 themed-grid-col" onclick="<%= menu.titulo %>()">
@@ -42,7 +42,7 @@
                                             <% menu.childs.forEach(function(menuChilds) { %>
                                                 <li>
                                                     <a class="dropdown-item" href="/<%= menuChilds.child %>/<%= userName %>">
-                                                        <%= menuChilds.child %>
+                                                       <span class="material-icons"><%= menu.icon %></span> <%= menuChilds.child %>
                                                     </a>
                                                 </li>
                                                 <%})%>
