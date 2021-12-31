@@ -188,8 +188,6 @@ router.get('/mercadolibre', (req, res) => {
     res.render('mercadolibre');
 });
 
-router.get('/admin/test', (req, res) => {
-    res.render('test');
-});
+
 
 module.exports = router;
