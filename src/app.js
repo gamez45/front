@@ -5,7 +5,7 @@ const app = express();
 
 
 // Server
-app.set('port', 8000);
+app.set('port', 8080);
 app.set('views', path.resolve(__dirname, 'views'));
 
 
