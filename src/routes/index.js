@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
 
     let options = {
         'method': 'POST',
-        'url': 'http://tlacuache.racing:8055/auth/login',
+        'url': 'https://mel.todoautopartes.com/auth/login',
         'headers': {
             'Authorization': 'Bearer',
             'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ router.get('/dashboards/:user', async(req, res) => {
 
     let options = {
         'method': 'GET',
-        'url': 'http://tlacuache.racing:8055/items/menus',
+        'url': 'http://mel.todoautopartes.com/items/menus',
         'headers': {
             'Authorization': `Bearer ${userToken}`,
             'Content-Type': 'application/json',
